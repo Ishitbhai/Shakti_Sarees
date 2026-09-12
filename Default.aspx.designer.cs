@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Shakti_Sarees
-{
-
-
-    public partial class _Default
-    {
+namespace Shakti_Sarees {
+    
+    
+    public partial class Default {
     }
 }

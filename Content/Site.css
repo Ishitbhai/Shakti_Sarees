@@ -1,21 +1,352 @@
-﻿/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    margin-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+﻿/* ================= GLOBAL RESETS & FONTS ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #FAFAFA;
+    color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .body-content {
-        padding: 0;
+form#mainForm {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.ss-hidden {
+    display: none !important;
+}
+
+/* ================= RESPONSIVE HEADER ================= */
+.ss-header-wrapper {
+    background-color: #FCFBF7;
+    border-bottom: 1px solid #ECE7DF;
+    width: 100%;
+}
+
+.ss-header-inner {
+    width: 92%;
+    max-width: 1560px; /* Expands to utilize wide monitors comfortably */
+    margin: 0 auto;
+    padding: 16px 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ss-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ss-brand-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(22px, 2.2vw, 28px);
+    font-weight: 700;
+    color: #681321;
+    text-decoration: none;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+}
+
+.ss-search-pill {
+    background-color: #ECEAE7;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    padding: 8px 18px;
+    flex: 0 1 440px;
+    min-width: 260px;
+}
+
+.ss-search-ico {
+    color: #78736E;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.ss-search-control {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 13.5px;
+    color: #333333;
+    width: 100%;
+}
+
+.ss-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+
+.ss-track-link {
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #4A4643;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+.ss-bag-wrap {
+    position: relative;
+    text-decoration: none;
+    color: #4A4643;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.ss-bag-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #681321;
+    color: #FFFFFF;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.ss-v-divider {
+    width: 1px;
+    height: 22px;
+    background-color: #D8D3CC;
+}
+
+.ss-btn-pill-outline {
+    text-decoration: none;
+    color: #681321;
+    border: 1px solid #681321;
+    background-color: #FCFBF7;
+    border-radius: 6px;
+    padding: 6px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+    .ss-btn-pill-outline:hover {
+        background-color: #681321;
+        color: #FFFFFF;
+    }
+
+.ss-avatar-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #681321;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.ss-bottom-nav {
+    display: flex;
+    align-items: center;
+}
+
+.ss-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+    .ss-menu a {
+        text-decoration: none;
+        color: #4A4643;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+        .ss-menu a:hover {
+            color: #681321;
+        }
+
+.ss-chevron {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.ss-dropdown-parent {
+    position: relative;
+}
+
+.ss-dropdown-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FCFBF7;
+    min-width: 200px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ECE7DF;
+    border-radius: 6px;
+    padding: 8px 0;
+    z-index: 100;
+}
+
+    .ss-dropdown-panel a {
+        display: block;
+        padding: 8px 18px;
+        font-weight: 500;
+    }
+
+        .ss-dropdown-panel a:hover {
+            background-color: #ECEAE7;
+        }
+
+.ss-dropdown-parent:hover .ss-dropdown-panel {
+    display: block;
+}
+
+/* ================= MAIN VIEWPORT ================= */
+.ss-main-viewport {
+    flex: 1;
+    width: 92%;
+    max-width: 1560px; /* Stretches nicely across your screen */
+    margin: 0 auto;
+    padding: 24px 0 40px 0;
+}
+
+/* ================= RESPONSIVE FOOTER ================= */
+.ss-footer-wrapper {
+    background-color: #E5E2DE;
+    color: #44403C;
+    padding: 48px 0 24px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.ss-footer-inner {
+    width: 92%;
+    max-width: 1560px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.6fr;
+    gap: 40px;
+}
+
+.ss-f-brand-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #681321;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.ss-f-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #57534E;
+    max-width: 320px;
+}
+
+.ss-f-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1C1917;
+    margin-bottom: 16px;
+}
+
+.ss-f-links {
+    list-style: none;
+}
+
+    .ss-f-links li {
+        margin-bottom: 10px;
+    }
+
+    .ss-f-links a {
+        text-decoration: none;
+        color: #57534E;
+        font-size: 13.5px;
+    }
+
+        .ss-f-links a:hover {
+            color: #681321;
+        }
+
+.ss-contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #57534E;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.ss-c-icon {
+    color: #681321;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.ss-footer-divider {
+    width: 92%;
+    max-width: 1560px;
+    margin: 36px auto 16px auto;
+    border-bottom: 1px solid #D8CFC8;
+}
+
+.ss-footer-copyright {
+    text-align: center;
+    font-size: 12.5px;
+    color: #6B6560;
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media (max-width: 992px) {
+    .ss-footer-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .ss-top-row {
+        gap: 15px;
+    }
+
+    .ss-search-pill {
+        order: 3;
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .ss-footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .ss-menu {
+        gap: 16px;
+        flex-wrap: wrap;
     }
 }

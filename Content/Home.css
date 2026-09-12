@@ -1,0 +1,281 @@
+﻿/* Fluid Home Wrapper */
+.ss-home-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 70px 0;
+}
+
+/* ================= 1. HERO BANNER ================= */
+.ss-hero-card {
+    position: relative;
+    width: 100%;
+    height: clamp(380px, 32vw, 540px); /* Scales proportionally with screen width */
+    background: linear-gradient( 115deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.40) 40%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0) 100% ), url('../images/home_main.png') center right / cover no-repeat;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.ss-hero-overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: clamp(30px, 5vw, 80px);
+    max-width: 520px;
+    z-index: 2;
+}
+
+.ss-hero-eyebrow {
+    font-size: clamp(10.5px, 1vw, 12px);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #D4AF7A;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.ss-hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(32px, 3.2vw, 52px);
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0 0 24px 0;
+    line-height: 1.15;
+}
+
+.ss-hero-btn {
+    display: inline-block;
+    background-color: #681321;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+    .ss-hero-btn:hover {
+        background-color: #4E0D18;
+        transform: translateY(-1px);
+    }
+
+/* ================= 2. SHOP BY FABRIC ================= */
+.ss-fabric-section {
+    padding: 10px 0 50px 0;
+    width: 100%;
+}
+
+.ss-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.ss-serif-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(22px, 2vw, 28px);
+    font-weight: 600;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.ss-sub-text {
+    font-size: 13.5px;
+    color: #706B65;
+    margin: 6px 0 0 0;
+}
+
+.ss-link-all {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #681321;
+    white-space: nowrap;
+}
+
+    .ss-link-all:hover {
+        text-decoration: underline;
+    }
+
+/* Responsive Grid that fills available space */
+.ss-fabric-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(14px, 1.8vw, 28px);
+}
+
+.ss-fabric-item {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.ss-fabric-thumb {
+    width: 100%;
+    height: clamp(220px, 20vw, 320px);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ECE8E1;
+    margin-bottom: 14px;
+}
+
+    .ss-fabric-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+.ss-fabric-item:hover .ss-fabric-thumb img {
+    transform: scale(1.03);
+}
+
+.ss-fabric-caption {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2D2D2D;
+    display: block;
+}
+
+/* ================= 3. NEW ARRIVALS ================= */
+.ss-new-arrivals-section {
+    width: 100%;
+    margin-top: 20px;
+    padding: 50px 0 60px 0;
+    border-top: 1px solid #ECE7E1;
+}
+
+.ss-title-center {
+    text-align: center;
+    margin-bottom: 36px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.ss-products-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(14px, 1.8vw, 28px);
+}
+
+/* Saree Card */
+.ss-card {
+    background-color: #F6F4F0;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.ss-card-media {
+    position: relative;
+    width: 100%;
+    height: clamp(240px, 22vw, 340px);
+    overflow: hidden;
+    background-color: #ECE8E1;
+}
+
+    .ss-card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.ss-tag-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding: 4px 9px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+}
+
+.ss-card-body {
+    background-color: #F6F4F0;
+    padding: 18px 16px 22px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ss-card-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16.5px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin: 0 0 6px 0;
+}
+
+.ss-card-caption {
+    font-size: 13px;
+    color: #6E6862;
+    margin: 0 0 16px 0;
+    line-height: 1.45;
+    min-height: 36px;
+}
+
+.ss-card-price {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.ss-browse-action {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.ss-btn-browse {
+    display: inline-block;
+    border: 1px solid #D5CECB;
+    background-color: #FFFFFF;
+    color: #4A4643;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+    .ss-btn-browse:hover {
+        border-color: #681321;
+        color: #681321;
+    }
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+@media (max-width: 1024px) {
+    .ss-fabric-row,
+    .ss-products-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .ss-fabric-row,
+    .ss-products-row {
+        grid-template-columns: 1fr;
+    }
+
+    .ss-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,191 @@
+﻿/* Split Layout Container */
+.ss-split-auth-container {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 180px);
+    background-color: #FFFFFF;
+    margin-top: -24px; /* Pulls flush under header */
+    margin-bottom: -40px;
+}
+
+/* Left Half: Heritage Image */
+.ss-auth-visual {
+    flex: 1 1 50%;
+    max-width: 50%;
+    position: relative;
+    overflow: hidden;
+    background-color: #ECE7DF;
+}
+
+.ss-auth-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Right Half: Soft Grey Background Area */
+.ss-auth-panel {
+    flex: 1 1 50%;
+    max-width: 50%;
+    background-color: #F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+/* Floating White Form Box */
+.ss-auth-box {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 480px;
+    padding: 44px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Top Soft Rose Avatar Badge */
+.ss-badge-icon-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ss-badge-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F2E4E6; /* Soft blush pink from your image */
+    color: #681321; /* Deep maroon */
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* Heading */
+.ss-reg-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A1A1A;
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+/* Underline Field Styles (Figma Match) */
+.ss-underline-group {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.ss-underline-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.ss-underline-col {
+    flex: 1;
+    position: relative;
+}
+
+.ss-underline-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #E2DCD5; /* Clean bottom line only */
+    background: transparent;
+    padding: 8px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    color: #2D2D2D;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+    .ss-underline-input::placeholder {
+        color: #7A7570;
+        font-size: 13.5px;
+    }
+
+    .ss-underline-input:focus {
+        border-bottom-color: #681321;
+    }
+
+/* Validation Text */
+.ss-val-text {
+    display: block;
+    color: #B02A37;
+    font-size: 11px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+.ss-auth-msg {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+    background-color: #EBF6ED;
+    color: #1E7E34;
+}
+
+/* Submit Action Button */
+.ss-register-pill-btn {
+    width: 100%;
+    background-color: #580B17; /* Deep rich maroon from your image */
+    color: #FFFFFF;
+    border: none;
+    padding: 13px 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 14px;
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-register-pill-btn:hover {
+        background-color: #42060F;
+    }
+
+/* Bottom Nav Link */
+.ss-switch-auth {
+    text-align: center;
+    font-size: 12.5px;
+    color: #6E6862;
+}
+
+    .ss-switch-auth a {
+        color: #1A1A1A;
+        text-decoration: none;
+        font-weight: 700;
+        margin-left: 2px;
+    }
+
+        .ss-switch-auth a:hover {
+            color: #681321;
+            text-decoration: underline;
+        }
+
+/* Responsive Collapse */
+@media (max-width: 900px) {
+    .ss-split-auth-container {
+        flex-direction: column;
+    }
+
+    .ss-auth-visual {
+        display: none; /* Shows clean form on mobile/tablet */
+    }
+
+    .ss-auth-panel {
+        max-width: 100%;
+        flex: 1 1 100%;
+        padding: 40px 20px;
+    }
+}

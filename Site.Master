@@ -79,15 +79,7 @@
                 <div class="ss-bottom-nav">
                     <ul class="ss-menu">
                         <li><a href="Default.aspx">Home</a></li>
-                        <li class="ss-dropdown-parent">
-                            <a href="Products.aspx">Categories <i class="fa-solid fa-chevron-down ss-chevron"></i></a>
-                            <div class="ss-dropdown-panel">
-                                <a href="Products.aspx?category=Banarasi">Banarasi Silk</a>
-                                <a href="Products.aspx?category=Cotton">Cotton Sarees</a>
-                                <a href="Products.aspx?category=Chiffon">Chiffon & Georgette</a>
-                                <a href="Products.aspx?category=Kanchipuram">Kanchipuram</a>
-                            </div>
-                        </li>
+                        <li><a href="Categories.aspx">Categories </a></li>
                         <li><a href="About.aspx">About</a></li>
                         <li><a href="Contact.aspx">Contact</a></li>
                     </ul>

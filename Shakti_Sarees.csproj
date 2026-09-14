@@ -100,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="Content\Cart.css" />
+    <Content Include="Categories.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Auth.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -118,7 +121,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Categories.css" />
     <Content Include="Content\Home.css" />
+    <Content Include="Content\ProductDetail.css" />
+    <Content Include="Content\Products.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -133,7 +139,30 @@
     <Content Include="images\home_cream_floral.png" />
     <Content Include="images\home_sunshine_block.png" />
     <Content Include="images\home_midnight_maroon.png" />
+    <Content Include="images\categories_banarasi_silk.png" />
+    <Content Include="images\categories_chiffon.png" />
+    <Content Include="images\categories_cotton.png" />
+    <Content Include="images\categories_kanchipuram_grand.png" />
+    <Content Include="images\categories_golden_glow_linen.png" />
+    <Content Include="images\categories_georgette.png" />
+    <Content Include="images\product_royal_maroon.png" />
+    <Content Include="images\product_emerald.png" />
+    <Content Include="images\product_mustard_pink.png" />
+    <Content Include="images\product_pastel_peach.png" />
+    <Content Include="images\product_navy_blur_silk.png" />
+    <Content Include="images\cart_1.png" />
+    <Content Include="images\cart_2.png" />
+    <Content Include="images\single_product_new_1.png" />
+    <Content Include="images\single_product_new_2.png" />
+    <Content Include="images\single_product_new_3.png" />
+    <Content Include="images\single_product_new_4.png" />
+    <Content Include="images\single_product_main.png" />
+    <Content Include="images\single_product_1.png" />
+    <Content Include="images\single_product_2.png" />
+    <Content Include="images\single_product_3.png" />
     <Content Include="Login.aspx" />
+    <Content Include="ProductDetail.aspx" />
+    <Content Include="Products.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -206,6 +235,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -229,6 +272,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

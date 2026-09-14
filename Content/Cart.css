@@ -1,0 +1,349 @@
+﻿/* Container */
+.ss-cart-viewport {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 80px 0;
+}
+
+/* Page Header */
+.ss-cart-page-header {
+    margin-bottom: 30px;
+}
+
+.ss-cart-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #681321; /* Rich maroon header */
+    margin: 0 0 8px 0;
+}
+
+.ss-cart-desc {
+    font-size: 13.5px;
+    color: #6E6862;
+    margin: 0;
+}
+
+/* Main Layout Grid */
+.ss-cart-layout {
+    display: flex;
+    gap: 36px;
+    align-items: flex-start;
+}
+
+/* ================= 1. LEFT ITEMS LIST ================= */
+.ss-cart-items-col {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Header Columns */
+.ss-cart-table-head {
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+    background-color: #FAF8F5;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #55504A;
+    margin-bottom: 14px;
+}
+
+.ss-th-prod {
+    flex: 2.2;
+}
+
+.ss-th-price {
+    flex: 1;
+    text-align: center;
+}
+
+.ss-th-qty {
+    flex: 1;
+    text-align: center;
+}
+
+.ss-th-total {
+    flex: 1;
+    text-align: right;
+}
+
+/* Item Card */
+.ss-cart-item-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 8px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* Product Info Cell */
+.ss-item-prod-cell {
+    flex: 2.2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ss-item-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #ECE7DF;
+    flex-shrink: 0;
+}
+
+    .ss-item-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.ss-item-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ss-badge-silk {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #8C6D1F;
+    background-color: #FDF6E2;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+}
+
+.ss-badge-kanchi {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #A33A4A;
+    background-color: #FCECEE;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+}
+
+.ss-cart-item-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.3;
+    margin: 0 0 8px 0;
+}
+
+.ss-remove-btn {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #A38234; /* Mustard/ochre remove label */
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+    .ss-remove-btn:hover {
+        color: #681321;
+    }
+
+/* Price Cell */
+.ss-item-price-cell {
+    flex: 1;
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #2D2D2D;
+}
+
+/* Quantity Cell */
+.ss-item-qty-cell {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.ss-qty-stepper {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ECEAE6;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.ss-step-btn {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: #4A4643;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .ss-step-btn:hover {
+        color: #000000;
+    }
+
+.ss-step-val {
+    width: 24px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+/* Total Cell */
+.ss-item-total-cell {
+    flex: 1;
+    text-align: right;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #580B17;
+}
+
+/* Return Link */
+.ss-continue-wrap {
+    margin-top: 24px;
+}
+
+.ss-continue-btn {
+    font-size: 13px;
+    color: #1A1A1A;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .ss-continue-btn:hover {
+        color: #681321;
+    }
+
+/* ================= 2. RIGHT ORDER SUMMARY ================= */
+.ss-cart-summary-col {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.ss-summary-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7DF;
+    border-top: 3px solid #580B17; /* Distinct deep maroon top border */
+    border-radius: 8px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.ss-summary-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 24px 0;
+}
+
+.ss-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #55504A;
+    margin-bottom: 12px;
+}
+
+.ss-sum-val {
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.ss-sum-divider {
+    border: none;
+    height: 1px;
+    background-color: #ECE7DF;
+    margin: 20px 0;
+}
+
+.ss-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.ss-total-label {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.ss-total-val {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #580B17;
+}
+
+.ss-checkout-btn {
+    width: 100%;
+    background-color: #580B17;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-checkout-btn:hover {
+        background-color: #42060F;
+    }
+
+/* ================= RESPONSIVE COLLAPSE ================= */
+@media (max-width: 900px) {
+    .ss-cart-layout {
+        flex-direction: column;
+    }
+
+    .ss-cart-summary-col {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .ss-cart-table-head {
+        display: none;
+    }
+
+    .ss-cart-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .ss-item-prod-cell, .ss-item-price-cell, .ss-item-qty-cell, .ss-item-total-cell {
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,306 @@
+﻿/* ================= MAIN PRODUCTS TWO-COLUMN LAYOUT ================= */
+.ss-products-layout {
+    display: flex;
+    gap: 36px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 20px 0 80px 0;
+}
+
+/* ================= 1. LEFT FILTER PANEL ================= */
+.ss-filter-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.ss-filter-card {
+    background-color: #F8F6F2; /* Soft warm oatmeal tone from Figma */
+    border-radius: 8px;
+    padding: 24px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.ss-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.ss-filter-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.ss-clear-all {
+    font-size: 11.5px;
+    color: #55504A;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+    .ss-clear-all:hover {
+        color: #681321;
+        text-decoration: underline;
+    }
+
+.ss-filter-group {
+    margin-bottom: 24px;
+}
+
+.ss-filter-label {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #4A4643;
+    margin-bottom: 14px;
+}
+
+/* Checkboxes */
+.ss-cbl-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .ss-cbl-list li {
+        margin-bottom: 10px;
+    }
+
+    .ss-cbl-list input[type="checkbox"] {
+        accent-color: #580B17;
+        margin-right: 8px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+
+    .ss-cbl-list label {
+        font-size: 13px;
+        color: #4A4643;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+
+/* Price Range */
+.ss-price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ss-price-box {
+    width: 80px;
+    padding: 6px 10px;
+    background-color: #ECEAE6;
+    border: 1px solid #DCD7D0;
+    border-radius: 4px;
+    font-size: 12.5px;
+    color: #2D2D2D;
+    outline: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.ss-price-sep {
+    color: #7A7570;
+    font-size: 13px;
+}
+
+/* Maroon Filter Button */
+.ss-apply-filter-btn {
+    width: 100%;
+    background-color: #580B17;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-apply-filter-btn:hover {
+        background-color: #42060F;
+    }
+
+/* ================= 2. RIGHT PRODUCTS CATALOG ================= */
+.ss-products-catalog {
+    flex: 1;
+}
+
+.ss-catalog-header {
+    margin-bottom: 24px;
+}
+
+.ss-catalog-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+/* 3-Column Product Grid */
+.ss-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Product Card */
+.ss-saree-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.ss-saree-media {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    background-color: #F6F4F0;
+    overflow: hidden;
+}
+
+    .ss-saree-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.ss-saree-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Body */
+.ss-saree-body {
+    padding: 16px 16px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ss-saree-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.ss-saree-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.ss-saree-price {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1A1A1A;
+    white-space: nowrap;
+}
+
+.ss-saree-desc {
+    font-size: 12px;
+    color: #6E6862;
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+    min-height: 34px;
+}
+
+/* Action Buttons */
+.ss-saree-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.ss-btn-details {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #1A1A1A;
+    color: #1A1A1A;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 0;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+    .ss-btn-details:hover {
+        background-color: #F6F4F0;
+    }
+
+.ss-btn-add {
+    flex: 1;
+    text-align: center;
+    background-color: #580B17;
+    color: #FFFFFF;
+    border: 1px solid #580B17;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-btn-add:hover {
+        background-color: #42060F;
+    }
+
+    .ss-btn-add i {
+        font-size: 11px;
+        margin-right: 4px;
+    }
+
+/* Responsive Collapse */
+@media (max-width: 1024px) {
+    .ss-catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ss-products-layout {
+        flex-direction: column;
+    }
+
+    .ss-filter-sidebar {
+        width: 100%;
+    }
+
+    .ss-catalog-grid {
+        grid-template-columns: 1fr;
+    }
+}

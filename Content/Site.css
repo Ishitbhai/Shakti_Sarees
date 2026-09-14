@@ -189,43 +189,6 @@ form#mainForm {
             color: #681321;
         }
 
-.ss-chevron {
-    font-size: 10px;
-    margin-left: 3px;
-}
-
-.ss-dropdown-parent {
-    position: relative;
-}
-
-.ss-dropdown-panel {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #FCFBF7;
-    min-width: 200px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    border: 1px solid #ECE7DF;
-    border-radius: 6px;
-    padding: 8px 0;
-    z-index: 100;
-}
-
-    .ss-dropdown-panel a {
-        display: block;
-        padding: 8px 18px;
-        font-weight: 500;
-    }
-
-        .ss-dropdown-panel a:hover {
-            background-color: #ECEAE7;
-        }
-
-.ss-dropdown-parent:hover .ss-dropdown-panel {
-    display: block;
-}
-
 /* ================= MAIN VIEWPORT ================= */
 .ss-main-viewport {
     flex: 1;

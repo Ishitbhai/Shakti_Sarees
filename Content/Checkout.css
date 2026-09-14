@@ -1,0 +1,307 @@
+﻿/* Container */
+.ss-checkout-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 80px 0;
+}
+
+/* Page Heading */
+.ss-checkout-header {
+    margin-bottom: 36px;
+}
+
+.ss-checkout-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #681321;
+    margin: 0 0 6px 0;
+}
+
+.ss-checkout-subtitle {
+    font-size: 13.5px;
+    color: #6E6862;
+    margin: 0;
+}
+
+/* Two Column Layout */
+.ss-checkout-layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+/* ================= 1. LEFT FORM COLUMN ================= */
+.ss-checkout-info-col {
+    flex: 1;
+    min-width: 0;
+}
+
+.ss-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.ss-sec-spacing {
+    margin-top: 36px;
+}
+
+.ss-sec-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #F1ECE6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2D2D2D;
+    font-size: 13px;
+}
+
+.ss-sec-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.ss-static-field {
+    margin-bottom: 18px;
+}
+
+.ss-static-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.ss-static-col {
+    flex: 1;
+}
+
+.ss-field-lbl {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #55504A;
+    margin-bottom: 7px;
+}
+
+/* Readonly Inputs */
+.ss-static-input {
+    width: 100%;
+    padding: 11px 14px;
+    background-color: #FAF8F5;
+    border: 1px solid #ECE7E1;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: #928D87;
+    cursor: not-allowed;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Phone input with +91 block */
+.ss-phone-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.ss-phone-prefix {
+    background-color: #FAF8F5;
+    border: 1px solid #ECE7E1;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    padding: 11px 12px;
+    font-size: 13px;
+    color: #2D2D2D;
+    font-weight: 600;
+}
+
+.ss-phone-input {
+    border-radius: 0 4px 4px 0;
+}
+
+.ss-profile-note {
+    font-size: 12.5px;
+    color: #55504A;
+    margin-top: 24px;
+}
+
+/* ================= 2. RIGHT SIDEBAR COLUMN ================= */
+.ss-checkout-side-col {
+    width: 360px;
+    flex-shrink: 0;
+}
+
+.ss-chk-card {
+    background-color: #FAF8F5;
+    border: 1px solid #ECE7E1;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.ss-chk-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 20px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #EAE5DE;
+}
+
+/* Item Rows */
+.ss-chk-items {
+    margin-bottom: 18px;
+}
+
+.ss-chk-item-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.ss-chk-item-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+    background-color: #ECE7DF;
+    flex-shrink: 0;
+}
+
+.ss-chk-item-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.ss-chk-item-name {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.ss-chk-item-price {
+    font-size: 12px;
+    color: #55504A;
+    font-weight: 600;
+}
+
+/* Bill Breakdown */
+.ss-chk-bill-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #55504A;
+    margin-bottom: 10px;
+}
+
+.ss-shipping-free {
+    color: #681321;
+    font-weight: 600;
+}
+
+.ss-chk-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid #EAE5DE;
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
+.ss-chk-total-lbl {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.ss-chk-total-val {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #580B17;
+}
+
+/* Payment Method Card */
+.ss-pay-card {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.ss-pay-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 16px;
+}
+
+.ss-pay-option {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ECE7E1;
+    border-radius: 6px;
+    padding: 14px 16px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+    .ss-pay-option input[type="radio"] {
+        accent-color: #580B17;
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+.ss-pay-text {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #2D2D2D;
+    flex: 1;
+}
+
+.ss-pay-icon {
+    font-size: 15px;
+    color: #55504A;
+}
+
+/* Solid Maroon Submit Button */
+.ss-place-order-btn {
+    width: 100%;
+    background-color: #580B17;
+    color: #FFFFFF;
+    border: none;
+    padding: 13px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-place-order-btn:hover {
+        background-color: #42060F;
+    }
+
+/* Responsive Collapse */
+@media (max-width: 900px) {
+    .ss-checkout-layout {
+        flex-direction: column;
+    }
+
+    .ss-checkout-side-col {
+        width: 100%;
+    }
+}

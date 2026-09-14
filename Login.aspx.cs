@@ -15,21 +15,8 @@ namespace Shakti_Sarees
             {
                 string identifier = txtIdentifier.Text.Trim().ToLower();
 
-                // Mock login logic for CIE-II UI testing:
-                // Test Admin: enter "admin@shaktisarees.com" or "9999999999"
-                if (identifier == "admin@shaktisarees.com" || identifier == "9999999999")
-                {
-                    Session["UserRole"] = "admin";
-                    Session["UserName"] = "Admin";
-                    Response.Redirect("~/Admin/Dashboard.aspx");
-                }
-                else
-                {
-                    // Regular customer login
-                    Session["UserRole"] = "customer";
-                    Session["UserName"] = identifier;
-                    Response.Redirect("~/Default.aspx");
-                }
+                Response.Redirect("~/Default.aspx");
+               
             }
         }
     }

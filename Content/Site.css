@@ -25,6 +25,47 @@ form#mainForm {
 .ss-hidden {
     display: none !important;
 }
+/* Profile Text Link */
+.ss-profile-text-link {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1A1A1A;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+    .ss-profile-text-link:hover {
+        color: #681321;
+    }
+
+/* Circular Avatar Icon Badge */
+.ss-avatar-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #F8F6F2;
+    border: 1px solid #ECE7E1;
+    color: #1A1A1A;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+    .ss-avatar-circle:hover {
+        background-color: #681321;
+        border-color: #681321;
+        color: #FFFFFF;
+    }
+
+    .ss-avatar-circle i {
+        line-height: 1;
+    }
 
 /* ================= RESPONSIVE HEADER ================= */
 .ss-header-wrapper {

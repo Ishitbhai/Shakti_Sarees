@@ -1,0 +1,188 @@
+﻿/* Container */
+.ss-orders-viewport {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 30px 0 80px 0;
+}
+
+/* Header */
+.ss-orders-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.ss-orders-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #681321;
+    margin: 0 0 6px 0;
+}
+
+.ss-orders-subtitle {
+    font-size: 13.5px;
+    color: #6E6862;
+    margin: 0;
+}
+
+/* Orders List */
+.ss-orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Single Order Card */
+.ss-order-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    gap: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* Left Image Box */
+.ss-order-media {
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #F8F6F2;
+    border: 1px solid #ECE7DF;
+}
+
+    .ss-order-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+/* Right Content */
+.ss-order-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.ss-order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.ss-order-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.ss-order-date {
+    font-size: 12.5px;
+    color: #6E6862;
+    margin-bottom: 14px;
+}
+
+/* Status Badges */
+.ss-status-badge {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.ss-badge-processing {
+    background-color: #EAE8E4;
+    color: #55504A;
+}
+
+.ss-badge-shipped {
+    background-color: #F8ECE1;
+    color: #B5621D;
+}
+
+.ss-badge-delivered {
+    background-color: #F6E6E8;
+    color: #7B2433;
+}
+
+/* Items List Info */
+.ss-order-items-summary {
+    margin-bottom: 16px;
+}
+
+.ss-items-count {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.ss-items-names {
+    font-size: 12.5px;
+    color: #55504A;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Price & Button Bottom Row */
+.ss-order-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ECE7E1;
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+.ss-order-price {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #580B17;
+}
+
+.ss-btn-view-details {
+    display: inline-block;
+    border: 1px solid #681321;
+    color: #681321;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 22px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+    .ss-btn-view-details:hover {
+        background-color: #681321;
+        color: #FFFFFF;
+    }
+
+/* Responsive Collapse */
+@media (max-width: 768px) {
+    .ss-order-card {
+        flex-direction: column;
+    }
+
+    .ss-order-media {
+        width: 100%;
+        height: 220px;
+    }
+
+    .ss-order-bottom {
+        padding-top: 16px;
+    }
+}

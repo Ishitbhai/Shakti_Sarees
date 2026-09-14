@@ -1,0 +1,177 @@
+﻿/* Container */
+.ss-profile-viewport {
+    width: 90%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 50px 0 90px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+/* ================= 1. CARDS BASE ================= */
+.ss-profile-card {
+    background-color: #F1ECE6; /* Soft warm grey base from screenshot */
+    border-radius: 8px;
+    padding: 30px 28px;
+    border: 1px solid #ECE7E1;
+}
+
+/* User Identity Header */
+.ss-prof-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 6px 0;
+}
+
+.ss-prof-email-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #681321;
+    margin-bottom: 24px;
+}
+
+.ss-email-icon {
+    font-size: 13px;
+    color: #681321;
+}
+
+/* Info Grid (Mobile & Address) */
+.ss-prof-info-grid {
+    display: flex;
+    gap: 16px;
+}
+
+.ss-info-pill {
+    flex: 1;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.ss-info-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #F8F1EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #681321;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.ss-info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.ss-info-label {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #7A7570;
+    margin-bottom: 3px;
+}
+
+.ss-info-val {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2D2D2D;
+}
+
+/* ================= 2. ACCOUNT ACTIONS CARD ================= */
+.ss-actions-heading {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #55504A;
+    margin-bottom: 16px;
+}
+
+.ss-actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+/* Action Rows */
+.ss-action-row {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: background-color 0.2s ease;
+}
+
+    .ss-action-row:hover {
+        background-color: #FAF8F5;
+    }
+
+.ss-action-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.ss-action-icon {
+    font-size: 14px;
+    color: #2D2D2D;
+    width: 16px;
+    text-align: center;
+}
+
+.ss-action-chevron {
+    font-size: 11px;
+    color: #8C8781;
+}
+
+/* Full Width Maroon Logout Button */
+.ss-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #580B17;
+    color: #FFFFFF;
+    padding: 14px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-logout-btn:hover {
+        background-color: #42060F;
+    }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    .ss-prof-info-grid {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,155 @@
+﻿/* Container */
+.ss-contact-viewport {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 50px 0 90px 0;
+}
+
+/* ================= 1. HEADER ================= */
+.ss-contact-header {
+    margin-bottom: 48px;
+}
+
+.ss-contact-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.ss-contact-eyebrow-line {
+    width: 38px;
+    height: 1px;
+    background-color: #8C2B38;
+}
+
+.ss-contact-eyebrow-text {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #8C2B38;
+}
+
+.ss-contact-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 3.5vw, 44px);
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+.ss-contact-highlight {
+    color: #681321; /* Rich maroon accent */
+}
+
+.ss-contact-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #55504A;
+    max-width: 580px;
+    margin: 0;
+}
+
+/* ================= 2. STORE CARD ================= */
+.ss-store-card {
+    background-color: #FAF8F5; /* Warm light cream tone matching Figma */
+    border-radius: 8px;
+    padding: 40px 48px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    max-width: 820px;
+}
+
+/* Badge */
+.ss-store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #C06A3B; /* Ochre/terracotta store label */
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.ss-badge-icon {
+    font-size: 13px;
+}
+
+/* Address */
+.ss-store-address {
+    margin-bottom: 32px;
+}
+
+    .ss-store-address p {
+        font-size: 14px;
+        color: #4A4643;
+        line-height: 1.5;
+        margin: 0 0 3px 0;
+    }
+
+/* Info Rows */
+.ss-store-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.ss-channel-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.ss-channel-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #EFEBE4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #55504A;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.ss-channel-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.ss-channel-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #7A7570;
+    margin-bottom: 4px;
+}
+
+.ss-channel-val {
+    font-size: 13.5px;
+    color: #1A1A1A;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.35;
+}
+
+a.ss-channel-val:hover {
+    color: #681321;
+    text-decoration: underline;
+}
+
+.ss-channel-sub {
+    font-size: 12px;
+    color: #7A7570;
+    margin-top: 2px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .ss-store-card {
+        padding: 28px 24px;
+    }
+}

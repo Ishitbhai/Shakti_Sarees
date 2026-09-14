@@ -1,0 +1,197 @@
+﻿/* Container */
+.ss-about-container {
+    width: 90%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 60px 0 90px 0;
+}
+
+/* ================= 1. TOP STORY SECTION ================= */
+.ss-about-story-row {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.ss-story-text-col {
+    flex: 1.1;
+    min-width: 0;
+}
+
+/* Eyebrow sub-header */
+.ss-story-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.ss-eyebrow-line {
+    width: 36px;
+    height: 1px;
+    background-color: #B5AFA8;
+}
+
+.ss-eyebrow-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6E6862;
+}
+
+/* Heading */
+.ss-story-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 3.2vw, 44px);
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.18;
+    margin: 0 0 28px 0;
+}
+
+/* Paragraphs */
+.ss-story-body p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #55504A;
+    margin-bottom: 18px;
+}
+
+/* Stylized Drop Cap for First Letter */
+.ss-drop-cap {
+    float: left;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    line-height: 20px;
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-bottom: 2px;
+    color: #1A1A1A;
+    font-weight: 600;
+}
+
+/* Right Media Showcase */
+.ss-story-media-col {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ss-story-image-wrap {
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 4 / 5;
+    background-color: #ECE7DF;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+    .ss-story-image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+    }
+
+/* ================= 2. BOTTOM PROMISE BANNER ================= */
+.ss-promise-banner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #580B17; /* Exact deep maroon background */
+    color: #FFFFFF;
+    padding: 70px 20px 80px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.ss-promise-content {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.ss-promise-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+}
+
+.ss-promise-intro {
+    font-size: 13.5px;
+    color: #E2D3D6;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0 auto 50px auto;
+}
+
+.ss-promise-features {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.ss-feature-item {
+    flex: 1;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ss-feature-icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.12); /* Translucent rounded badge */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.ss-feature-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.ss-feature-desc {
+    font-size: 12px;
+    color: #D6C4C8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .ss-about-story-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .ss-story-media-col {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .ss-story-image-wrap {
+        max-width: 100%;
+    }
+
+    .ss-promise-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+    }
+}

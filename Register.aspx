@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Create Account" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Shakti_Sarees.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="Content/Auth.css" rel="stylesheet" type="text/css" />
+<link href="<%= ResolveUrl("~/Content/Auth.css?v=2") %>" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">

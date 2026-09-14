@@ -189,3 +189,156 @@
         padding: 40px 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= LOGIN PAGE (FIGMA REPLICA) ================= */
+.ss-login-viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 80px 20px;
+    width: 100%;
+}
+
+.ss-login-card {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #ECE7DF;
+}
+
+/* Header Top Tab */
+.ss-login-header {
+    background-color: #F6F4F0;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #EAE5DE;
+}
+
+.ss-login-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+/* Card Body */
+.ss-login-body {
+    padding: 36px 36px 40px 36px;
+}
+
+.ss-login-group {
+    margin-bottom: 22px;
+}
+
+.ss-login-label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.ss-login-input {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    color: #2D2D2D;
+    background-color: #ECEAE7; /* Soft grey input container from screenshot */
+    border: 1px solid #E2DED8;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+    .ss-login-input::placeholder {
+        color: #9E9892;
+        font-size: 13px;
+    }
+
+    .ss-login-input:focus {
+        background-color: #FFFFFF;
+        border-color: #681321;
+    }
+
+/* Dark Charcoal/Black Submit Button */
+.ss-login-submit-btn {
+    width: 100%;
+    background-color: #222222; /* Pure charcoal black from design */
+    color: #FFFFFF;
+    border: none;
+    padding: 13px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 26px;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-login-submit-btn:hover {
+        background-color: #000000;
+    }
+
+/* "OR" Divider */
+.ss-or-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 26px;
+}
+
+.ss-or-line {
+    flex: 1;
+    height: 1px;
+    background-color: #E2DDD6;
+}
+
+.ss-or-text {
+    padding: 0 14px;
+    font-size: 11px;
+    color: #7A7570;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Link */
+.ss-login-footer {
+    text-align: center;
+    font-size: 13px;
+    color: #333333;
+}
+
+.ss-login-link {
+    color: #1A1A1A;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 2px;
+}
+
+    .ss-login-link:hover {
+        color: #681321;
+    }

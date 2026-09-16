@@ -1,0 +1,172 @@
+﻿/* Container */
+.ss-cat-viewport {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Header */
+.ss-cat-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.ss-cat-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 6px 0;
+}
+
+.ss-cat-subtitle {
+    font-size: 13.5px;
+    color: #6E6862;
+    margin: 0;
+}
+
+/* Add Category Button */
+.ss-btn-add-cat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #680A1A;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-btn-add-cat:hover {
+        background-color: #4F0613;
+    }
+
+/* Table Card */
+.ss-cat-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* Table Header */
+.ss-cat-table-head {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    background-color: #FAF8F2; /* Cream tinted header row */
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #706B65;
+}
+
+/* Data Row */
+.ss-cat-row {
+    display: flex;
+    align-items: center;
+    padding: 22px 30px;
+    border-bottom: 1px solid #F3EFEA;
+    font-size: 13.5px;
+    transition: background-color 0.15s ease;
+}
+
+    .ss-cat-row:last-child {
+        border-bottom: none;
+    }
+
+    .ss-cat-row:hover {
+        background-color: #FAFAF8;
+    }
+
+/* Column Distributions */
+.ss-col-cid {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.ss-col-cname {
+    flex: 1;
+    font-weight: 600;
+}
+
+.ss-col-cstatus {
+    width: 130px;
+}
+
+.ss-col-cactions {
+    width: 90px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+/* Text Utilities */
+.ss-txt-muted {
+    color: #55504A;
+    font-size: 13px;
+}
+
+.ss-txt-dark {
+    color: #1A1A1A;
+}
+
+/* Status Badges */
+.ss-badge-active {
+    background-color: #E2F5EA;
+    color: #2E7D32;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.ss-badge-inactive {
+    background-color: #FDE8E8;
+    color: #C53030;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Actions */
+.ss-cat-action-btn {
+    color: #4A4643;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ss-cat-edit:hover {
+    color: #1A1A1A;
+}
+
+.ss-cat-delete:hover {
+    color: #932D3F;
+}
+
+/* Responsive Collapse */
+@media (max-width: 768px) {
+    .ss-cat-card {
+        padding: 0;
+    }
+
+    .ss-cat-table-head, .ss-cat-row {
+        padding: 16px 18px;
+    }
+
+    .ss-col-cid {
+        width: 100px;
+    }
+}

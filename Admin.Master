@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Shakti_Sarees.Admin" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Shakti Saree Admin</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Admin Stylesheet -->
+    <link href="<%= ResolveUrl("~/Content/Admin.css?v=1") %>" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="AdminHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="formAdmin" runat="server">
+        <div class="ss-admin-wrapper">
+
+            <!-- ================= DEEP MAROON SIDEBAR ================= -->
+            <aside class="ss-admin-sidebar">
+                
+                <!-- Sidebar Brand / Logo -->
+                <div class="ss-side-brand">
+                    <i class="fa-solid fa-user-gear ss-brand-icon"></i>
+                    <span class="ss-brand-text">Admin Panel</span>
+                </div>
+
+                <!-- Main Navigation -->
+                <nav class="ss-side-nav">
+                    <ul class="ss-side-menu">
+                        <li>
+                            <a href="AdminDashboard.aspx" class="ss-nav-item">
+                                <i class="fa-solid fa-shapes"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminProducts.aspx" class="ss-nav-item">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>Manage Products</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminCategories.aspx" class="ss-nav-item">
+                                <i class="fa-solid fa-network-wired"></i>
+                                <span>Manage Categories</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminOrders.aspx" class="ss-nav-item">
+                                <i class="fa-regular fa-clipboard"></i>
+                                <span>Manage Orders</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminUsers.aspx" class="ss-nav-item">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Manage Users</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="ss-nav-separator"></div>
+
+                    <!-- Configuration Section -->
+                    <span class="ss-nav-section-title">CONFIGURATION</span>
+
+                    <ul class="ss-side-menu">
+                        <li>
+                            <a href="AdminAbout.aspx" class="ss-nav-item">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Manage About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminContact.aspx" class="ss-nav-item">
+                                <i class="fa-regular fa-circle-question"></i>
+                                <span>Manage Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminChangePassword.aspx" class="ss-nav-item">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                <span>Change Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </aside>
+
+            <!-- ================= RIGHT WORKSPACE ================= -->
+            <div class="ss-admin-workspace">
+                
+                <!-- Top Header -->
+                <header class="ss-admin-topbar">
+                    <div class="ss-topbar-left">
+                        <span class="ss-topbar-title">Shakti Saree Admin</span>
+                    </div>
+
+                    <div class="ss-topbar-right">
+                        <!-- User Storefront Return Button -->
+                        <a href="Categories.aspx" class="ss-btn-user-side">
+                            <i class="fa-solid fa-store"></i> User Side
+                        </a>
+
+                        <div class="ss-topbar-vdiv"></div>
+
+                        <!-- Admin Profile Link -->
+                        <a href="AdminProfile.aspx" class="ss-admin-profile-link">
+                            <span class="ss-admin-profile-name">Admin Profile</span>
+                            <div class="ss-admin-avatar">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                        </a>
+
+                        <!-- Logout Icon Button -->
+                        <asp:LinkButton ID="btnLogoutAdmin" runat="server" CssClass="ss-admin-logout" OnClick="btnLogoutAdmin_Click" ToolTip="Logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </asp:LinkButton>
+                    </div>
+                </header>
+
+                <!-- Page Content Region -->
+                <main class="ss-admin-body">
+                    <asp:ContentPlaceHolder ID="AdminContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </main>
+
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿/* Container */
+.ss-cat-viewport {
+    max-width: 650px;
+    margin: 10px 0 0 10px;
+}
+
+/* Page Header */
+.ss-cat-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 28px 0;
+}
+
+/* Form Card */
+.ss-cat-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 6px;
+    padding: 34px 38px 30px 38px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Field Layout */
+.ss-cat-field {
+    margin-bottom: 24px;
+}
+
+.ss-cat-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+
+/* Text Input */
+.ss-cat-input {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #FFFFFF;
+    border: 1px solid #E1DBD4;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1A1A1A;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+    .ss-cat-input::placeholder {
+        color: #A5A099;
+    }
+
+    .ss-cat-input:focus {
+        border-color: #72081B;
+    }
+
+/* Radio Group */
+.ss-cat-status-group {
+    margin-bottom: 34px;
+}
+
+.ss-cat-radio-row {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.ss-cat-radio-opt,
+.ss-cat-radio-opt span,
+.ss-cat-radio-opt label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13.5px;
+    color: #2D2D2D;
+    font-weight: 500;
+}
+
+    .ss-cat-radio-opt input[type="radio"] {
+        accent-color: #72081B;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        margin: 0;
+    }
+
+/* Action Strip */
+.ss-cat-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    border-top: 1px solid #F3EFEA;
+    padding-top: 24px;
+}
+
+/* Cancel Link */
+.ss-btn-cat-cancel {
+    font-size: 13px;
+    font-weight: 700;
+    color: #C08A3B;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .ss-btn-cat-cancel:hover {
+        color: #9E6D28;
+    }
+
+/* Save Button */
+.ss-btn-cat-save {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #72081B;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 11px 26px;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-btn-cat-save:hover {
+        background-color: #550413;
+    }
+
+/* Server Validation Feedback */
+.ss-val-text {
+    display: block;
+    color: #8C0D1B;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 5px;
+}

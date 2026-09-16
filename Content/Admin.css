@@ -1,0 +1,204 @@
+﻿/* Reset & Shell */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1A1A1A;
+}
+
+.ss-admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ================= 1. SIDEBAR ================= */
+.ss-admin-sidebar {
+    width: 240px;
+    background-color: #680A1A; /* Signature deep maroon sidebar */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
+/* Brand */
+.ss-side-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px 28px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ss-brand-icon {
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+.ss-brand-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 0.3px;
+}
+
+/* Nav Menu */
+.ss-side-nav {
+    padding-top: 20px;
+}
+
+.ss-side-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ss-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 24px;
+    color: #F0DADE;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+    .ss-nav-item i {
+        width: 18px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .ss-nav-item:hover,
+    .ss-nav-item.active {
+        color: #FFFFFF;
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+.ss-nav-separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 22px 24px;
+}
+
+.ss-nav-section-title {
+    display: block;
+    padding: 0 24px 14px 24px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #E2B2B9;
+}
+
+/* ================= 2. TOPBAR & WORKSPACE ================= */
+.ss-admin-workspace {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    min-width: 0;
+}
+
+.ss-admin-topbar {
+    height: 64px;
+    border-bottom: 1px solid #ECE7E1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    background-color: #FFFFFF;
+}
+
+.ss-topbar-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #680A1A;
+}
+
+.ss-topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* User Side Button */
+.ss-btn-user-side {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #680A1A;
+    color: #680A1A;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+    .ss-btn-user-side:hover {
+        background-color: #680A1A;
+        color: #FFFFFF;
+    }
+
+.ss-topbar-vdiv {
+    width: 1px;
+    height: 24px;
+    background-color: #ECE7E1;
+}
+
+/* Profile Tab */
+.ss-admin-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.ss-admin-profile-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2D2D2D;
+}
+
+.ss-admin-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #580B17;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+/* Logout */
+.ss-admin-logout {
+    color: #2D2D2D;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+    .ss-admin-logout:hover {
+        color: #680A1A;
+    }
+
+/* Main Body Viewport */
+.ss-admin-body {
+    padding: 36px;
+    flex: 1;
+    background-color: #FAFAFA;
+}

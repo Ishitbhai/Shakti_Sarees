@@ -1,0 +1,166 @@
+﻿/* Container */
+.ss-ov-container {
+    max-width: 1200px;
+}
+
+.ss-ov-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 32px 0;
+}
+
+/* Stat Cards (5 across) */
+.ss-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-bottom: 48px;
+}
+
+.ss-stat-card {
+    background-color: #F1ECE6;
+    border-radius: 6px;
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+
+.ss-stat-lbl {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #6E6862;
+    line-height: 1.35;
+}
+
+.ss-stat-num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1A1A1A;
+    line-height: 1;
+}
+
+/* Recent Orders Card */
+.ss-recent-orders-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    padding: 24px 28px;
+}
+
+.ss-ro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.ss-ro-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.ss-ro-view-all {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: #8C2B38;
+    text-decoration: none;
+}
+
+    .ss-ro-view-all:hover {
+        text-decoration: underline;
+    }
+
+/* Table Head */
+.ss-ro-table-head {
+    display: flex;
+    padding: 12px 16px;
+    background-color: #FAF8F5;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #6E6862;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+
+/* Table Rows */
+.ss-ro-row {
+    display: flex;
+    align-items: center;
+    padding: 18px 16px;
+    border-bottom: 1px solid #F4F1EC;
+    font-size: 13px;
+    color: #333333;
+}
+
+    .ss-ro-row:last-child {
+        border-bottom: none;
+    }
+
+/* Columns Width */
+.ss-col-oid {
+    flex: 1;
+}
+
+.ss-col-cust {
+    flex: 1.5;
+}
+
+.ss-col-date {
+    flex: 1.2;
+}
+
+.ss-col-amt {
+    flex: 1;
+}
+
+.ss-col-stat {
+    flex: 1;
+    text-align: right;
+}
+
+.ss-oid-val {
+    color: #55504A;
+    font-size: 12px;
+}
+
+.ss-bold {
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+/* Status Pill */
+.ss-badge-proc {
+    background-color: #FCEFD5;
+    color: #A06D1C;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .ss-stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .ss-stat-grid {
+        grid-template-columns: 1fr;
+    }
+}

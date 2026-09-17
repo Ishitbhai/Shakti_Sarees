@@ -1,0 +1,223 @@
+﻿/* Viewport */
+.ss-ord-viewport {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Create Order Button */
+.ss-ord-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+.ss-ord-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 6px 0;
+}
+
+.ss-ord-subtitle {
+    font-size: 13.5px;
+    color: #6E6862;
+    margin: 0;
+}
+
+.ss-btn-create-order {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #72081B; /* Signature maroon */
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-btn-create-order:hover {
+        background-color: #550413;
+    }
+
+/* Card Table */
+.ss-ord-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+/* Table Header */
+.ss-ord-table-head {
+    display: flex;
+    align-items: center;
+    padding: 16px 28px;
+    background-color: #F7F5F2; /* Subtle tinted grey header */
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #5A5652;
+}
+
+/* Data Row */
+.ss-ord-row {
+    display: flex;
+    align-items: center;
+    padding: 22px 28px;
+    border-bottom: 1px solid #F3EFEA;
+    font-size: 13px;
+    transition: background-color 0.15s ease;
+}
+
+    .ss-ord-row:last-child {
+        border-bottom: none;
+    }
+
+    .ss-ord-row:hover {
+        background-color: #FAFAF8;
+    }
+
+/* Columns Distribution */
+.ss-col-oid {
+    width: 75px;
+    flex-shrink: 0;
+}
+
+.ss-col-cust {
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ss-col-prod {
+    flex: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ss-col-date {
+    width: 120px;
+    color: #4A4643;
+}
+
+.ss-col-total {
+    width: 110px;
+}
+
+.ss-col-status {
+    width: 125px;
+}
+
+.ss-col-actions {
+    width: 75px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+/* Text Styles */
+.ss-oid-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #72081B; /* Maroon order number */
+}
+
+.ss-cust-name {
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.ss-cust-email {
+    font-size: 12px;
+    color: #6E6862;
+}
+
+.ss-prod-cat {
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.ss-prod-title {
+    font-size: 12px;
+    color: #4A4643;
+}
+
+.ss-total-amt {
+    font-weight: 700;
+    color: #1A1A1A;
+    font-size: 13.5px;
+}
+
+/* Status Badges */
+.ss-badge-yellow {
+    background-color: #F8E7A2;
+    color: #7D5D06;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.ss-badge-grey {
+    background-color: #D3D2D0;
+    color: #55504A;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.ss-badge-blue {
+    background-color: #BBE0F9;
+    color: #19679E;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.ss-badge-green {
+    background-color: #BFF2C8;
+    color: #1A752B;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+/* Actions */
+.ss-ord-action-btn {
+    color: #4A4643;
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ss-ord-edit:hover {
+    color: #1A1A1A;
+}
+
+.ss-ord-delete:hover {
+    color: #72081B;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .ss-col-date, .ss-col-prod {
+        display: none;
+    }
+}

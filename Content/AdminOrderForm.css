@@ -1,0 +1,237 @@
+﻿/* Container */
+.ss-aof-viewport {
+    max-width: 860px;
+    margin: 15px auto;
+}
+
+/* Form Card */
+.ss-aof-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 6px;
+    padding: 36px 42px 30px 42px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Sections */
+.ss-aof-section {
+    border-bottom: 1px solid #F1ECE6;
+    padding-bottom: 26px;
+    margin-bottom: 28px;
+}
+
+.ss-products-sec {
+    padding-bottom: 30px;
+}
+
+.ss-aof-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 22px 0;
+}
+
+/* Rows & Grid */
+.ss-aof-row {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 20px;
+}
+
+    .ss-aof-row:last-child {
+        margin-bottom: 0;
+    }
+
+.ss-aof-col {
+    flex: 1;
+}
+
+.ss-aof-label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+/* Inputs & Dropdowns */
+.ss-aof-input,
+.ss-aof-select {
+    width: 100%;
+    padding: 11px 14px;
+    background-color: #FFFFFF;
+    border: 1px solid #DCD7D0;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: #2D2D2D;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+    .ss-aof-input:focus,
+    .ss-aof-select:focus {
+        border-color: #72081B;
+    }
+
+    .ss-aof-input::placeholder {
+        color: #A5A099;
+    }
+
+.ss-input-readonly {
+    background-color: #FAF8F5;
+    color: #6E6862;
+    cursor: not-allowed;
+}
+
+.ss-aof-hint {
+    display: block;
+    font-size: 11px;
+    color: #6E6862;
+    margin-top: 6px;
+}
+
+/* Section: Products Table */
+.ss-prod-head-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+    .ss-prod-head-strip .ss-aof-title {
+        margin-bottom: 0;
+    }
+
+.ss-btn-add-item {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #72081B;
+    color: #72081B;
+    background-color: transparent;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+    .ss-btn-add-item:hover {
+        background-color: #72081B;
+        color: #FFFFFF;
+    }
+
+.ss-prod-table-box {
+    border: 1px solid #ECE7E1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.ss-prod-table-head {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    background-color: #FAF8F4;
+    font-size: 11px;
+    font-weight: 700;
+    color: #2D2D2D;
+    gap: 16px;
+}
+
+.ss-prod-table-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    background-color: #FFFFFF;
+    gap: 16px;
+}
+
+/* Product Columns Distribution */
+.ss-pcol-id {
+    flex: 2;
+}
+
+.ss-pcol-qty {
+    width: 90px;
+}
+
+.ss-pcol-price {
+    width: 140px;
+}
+
+.ss-pcol-act {
+    width: 50px;
+    text-align: center;
+}
+
+.ss-txt-center {
+    text-align: center;
+}
+
+.ss-prow-delete {
+    color: #8C0D1B;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+    .ss-prow-delete:hover {
+        opacity: 0.7;
+    }
+
+/* Footer Actions */
+.ss-aof-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.ss-aof-cancel-btn {
+    font-size: 13px;
+    font-weight: 700;
+    color: #C08A3B;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .ss-aof-cancel-btn:hover {
+        color: #9E6D28;
+    }
+
+.ss-aof-create-btn {
+    background-color: #72081B;
+    color: #FFFFFF;
+    border: none;
+    padding: 11px 24px;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .ss-aof-create-btn:hover {
+        background-color: #550413;
+    }
+
+/* Validation Feedback */
+.ss-val-text {
+    display: block;
+    color: #8C0D1B;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+    .ss-aof-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+}

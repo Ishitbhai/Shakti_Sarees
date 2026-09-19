@@ -1,0 +1,157 @@
+﻿/* Container Viewport */
+.ss-ep-viewport {
+    max-width: 820px;
+    margin: 10px 0 0 10px;
+}
+
+/* Card Shell */
+.ss-ep-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECE7E1;
+    border-radius: 6px;
+    padding: 34px 38px 28px 38px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Section Title & Rule */
+.ss-ep-section {
+    margin-bottom: 24px;
+}
+
+.ss-ep-section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 14px 0;
+}
+
+.ss-ep-divider {
+    height: 1px;
+    background-color: #F1ECE6;
+    margin-bottom: 20px;
+}
+
+/* Fields & Layouts */
+.ss-ep-field {
+    margin-bottom: 18px;
+}
+
+.ss-field-narrow {
+    max-width: 280px;
+}
+
+.ss-ep-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
+.ss-ep-col {
+    flex: 1;
+}
+
+.ss-col-compact {
+    max-width: 280px;
+    flex: 1;
+}
+
+.ss-col-wide {
+    flex: 1.4;
+}
+
+.ss-ep-label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+/* Inputs */
+.ss-ep-input {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #C8C3BC;
+    border-radius: 2px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: #1A1A1A;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+    .ss-ep-input:focus {
+        border-color: #72081B;
+    }
+
+/* Footer Actions */
+.ss-ep-footer-divider {
+    height: 1px;
+    background-color: #F1ECE6;
+    margin: 28px 0 20px 0;
+}
+
+.ss-ep-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.ss-btn-ep-cancel {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A1A1A;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .ss-btn-ep-cancel:hover {
+        color: #72081B;
+    }
+
+.ss-btn-ep-save {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: none;
+    color: #1A1A1A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+    .ss-btn-ep-save:hover {
+        color: #72081B;
+    }
+
+    .ss-btn-ep-save i {
+        font-size: 13.5px;
+    }
+
+/* Validation Feedback */
+.ss-val-text {
+    display: block;
+    color: #8C0D1B;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 650px) {
+    .ss-ep-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .ss-field-narrow, .ss-col-compact {
+        max-width: 100%;
+    }
+}

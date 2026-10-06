@@ -78,22 +78,22 @@ namespace Shakti_Sarees
         protected global::System.Web.UI.WebControls.TextBox txtTotalAmount;
 
         /// <summary>
-        /// txtProductName control.
+        /// txtProductId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductName;
+        protected global::System.Web.UI.WebControls.TextBox txtProductId;
 
         /// <summary>
-        /// rfvProductName control.
+        /// rfvProductId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProductName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProductId;
 
         /// <summary>
         /// txtQuantity control.

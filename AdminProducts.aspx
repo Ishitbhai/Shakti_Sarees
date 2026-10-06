@@ -40,7 +40,7 @@
                         <img src="/images/home_main.png" alt="Crimson Gold Kanjeevaram" />
                     </div>
                 </div>
-                <span class="ss-col-id">#PRD-101</span>
+                <span class="ss-col-id">#1</span>
                 <span class="ss-col-name">Crimson Gold Kanjeevaram</span>
                 <span class="ss-col-cat">Kanjeevaram</span>
                 <span class="ss-col-price">&#8377; 24,500</span>
@@ -68,7 +68,7 @@
                         <img src="/images/home_main.png" alt="Kasavu Cotton Classic" />
                     </div>
                 </div>
-                <span class="ss-col-id">#PRD-102</span>
+                <span class="ss-col-id">#2</span>
                 <span class="ss-col-name">Kasavu Cotton Classic</span>
                 <span class="ss-col-cat">Cotton</span>
                 <span class="ss-col-price">&#8377; 3,200</span>
@@ -96,7 +96,7 @@
                         <img src="/images/home_main.png" alt="Emerald Flora Banarasi" />
                     </div>
                 </div>
-                <span class="ss-col-id">#PRD-103</span>
+                <span class="ss-col-id">#3</span>
                 <span class="ss-col-name">Emerald Flora Banarasi</span>
                 <span class="ss-col-cat">Banarasi</span>
                 <span class="ss-col-price">&#8377; 18,900</span>
@@ -124,7 +124,7 @@
                         <img src="/images/home_main.png" alt="Crimson Gold Kanjeevaram" />
                     </div>
                 </div>
-                <span class="ss-col-id">#PRD-101</span>
+                <span class="ss-col-id">#4</span>
                 <span class="ss-col-name">Crimson Gold Kanjeevaram</span>
                 <span class="ss-col-cat">Kanjeevaram</span>
                 <span class="ss-col-price">&#8377; 24,500</span>
@@ -152,7 +152,7 @@
                         <img src="/images/home_main.png" alt="Kasavu Cotton Classic" />
                     </div>
                 </div>
-                <span class="ss-col-id">#PRD-102</span>
+                <span class="ss-col-id">#5</span>
                 <span class="ss-col-name">Kasavu Cotton Classic</span>
                 <span class="ss-col-cat">Cotton</span>
                 <span class="ss-col-price">&#8377; 3,200</span>
@@ -180,7 +180,7 @@
                         <img src="/images/home_main.png" alt="Emerald Flora Banarasi" />
                     </div>
                 </div>
-                <span class="ss-col-id">#PRD-103</span>
+                <span class="ss-col-id">#6</span>
                 <span class="ss-col-name">Emerald Flora Banarasi</span>
                 <span class="ss-col-cat">Banarasi</span>
                 <span class="ss-col-price">&#8377; 18,900</span>

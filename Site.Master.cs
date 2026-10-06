@@ -16,9 +16,9 @@ namespace Shakti_Sarees
         private void ApplyHeaderState()
         {
 
-            phGuestActions.Visible = true;
+            phGuestActions.Visible = false;
             phCustomerActions.Visible = false;
-            phAdminActions.Visible = false;
+            phAdminActions.Visible = true;
     
         }
 

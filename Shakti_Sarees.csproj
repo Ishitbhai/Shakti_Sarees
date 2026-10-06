@@ -118,6 +118,10 @@
     <Content Include="AdminProducts.aspx" />
     <Content Include="AdminProfile.aspx" />
     <Content Include="AdminUsers.aspx" />
+    <Content Include="App_Data\Shakti_Sarees.mdf" />
+    <Content Include="App_Data\Shakti_Sarees_log.ldf">
+      <DependentUpon>Shakti_Sarees.mdf</DependentUpon>
+    </Content>
     <Content Include="Cart.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Checkout.aspx" />
@@ -546,9 +550,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />

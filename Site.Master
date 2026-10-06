@@ -67,8 +67,8 @@
                         </asp:PlaceHolder>
 
                         <asp:PlaceHolder ID="phAdminActions" runat="server" Visible="false">
-                            <a href="Admin/Dashboard.aspx" class="ss-btn-pill-outline ss-btn-admin">Admin Dashboard</a>
-                            <a href="Admin/AdminProfile.aspx" class="ss-avatar-circle">
+                            <a href="AdminDashboard.aspx" class="ss-btn-pill-outline ss-btn-admin">Admin Dashboard</a>
+                            <a href="AdminProfile.aspx" class="ss-avatar-circle">
                                 <i class="fa-regular fa-user"></i>
                             </a>
                         </asp:PlaceHolder>

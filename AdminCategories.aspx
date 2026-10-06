@@ -31,7 +31,7 @@
 
             <!-- Row 1: Banarasi Silk -->
             <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#CAT-001</span>
+                <span class="ss-col-cid ss-txt-muted">#1</span>
                 <span class="ss-col-cname ss-txt-dark">Banarasi Silk</span>
                 <div class="ss-col-cstatus">
                     <span class="ss-badge-active">ACTIVE</span>
@@ -50,7 +50,7 @@
 
             <!-- Row 2: Cotton Elegance -->
             <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#CAT-002</span>
+                <span class="ss-col-cid ss-txt-muted">#2</span>
                 <span class="ss-col-cname ss-txt-dark">Cotton Elegance</span>
                 <div class="ss-col-cstatus">
                     <span class="ss-badge-active">ACTIVE</span>
@@ -69,7 +69,7 @@
 
             <!-- Row 3: Kanjivaram -->
             <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#CAT-003</span>
+                <span class="ss-col-cid ss-txt-muted">#3</span>
                 <span class="ss-col-cname ss-txt-dark">Kanjivaram</span>
                 <div class="ss-col-cstatus">
                     <span class="ss-badge-inactive">INACTIVE</span>
@@ -85,11 +85,30 @@
                     </a>
                 </div>
             </div>
-
+            
             <!-- Row 4: Designer Georgette -->
             <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#CAT-004</span>
+                <span class="ss-col-cid ss-txt-muted">#4</span>
                 <span class="ss-col-cname ss-txt-dark">Designer Georgette</span>
+                <div class="ss-col-cstatus">
+                    <span class="ss-badge-active">ACTIVE</span>
+                </div>
+                <div class="ss-col-cactions">
+                    <a href="AdminEditCategory.aspx?id=4" class="ss-cat-action-btn ss-cat-edit" title="Edit">
+                        <i class="fa-solid fa-pencil"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="ss-cat-action-btn ss-cat-delete"
+                       onclick="confirm('Are you sure you want to delete this category?'); return false;"
+                       title="Delete">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Row 5: Patola -->
+            <div class="ss-cat-row">
+                <span class="ss-col-cid ss-txt-muted">#5</span>
+                <span class="ss-col-cname ss-txt-dark">Patola</span>
                 <div class="ss-col-cstatus">
                     <span class="ss-badge-active">ACTIVE</span>
                 </div>

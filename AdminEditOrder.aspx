@@ -79,7 +79,7 @@
                 <div class="ss-prod-table-box">
                     <!-- Column Headers -->
                     <div class="ss-prod-table-head">
-                        <span class="ss-pcol-id">Product Name</span>
+                        <span class="ss-pcol-id">Product ID</span>
                         <span class="ss-pcol-qty">Quantity</span>
                         <span class="ss-pcol-price">Price (&#8377;)</span>
                         <span class="ss-pcol-act">Action</span>
@@ -88,10 +88,10 @@
                     <!-- Row 1 Item Input -->
                     <div class="ss-prod-table-row">
                         <div class="ss-pcol-id">
-                            <asp:TextBox ID="txtProductName" runat="server" CssClass="ss-aof-input" Text="PRD-101"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvProductName" runat="server"
-                                ControlToValidate="txtProductName"
-                                ErrorMessage="Product is required"
+                            <asp:TextBox ID="txtProductId" runat="server" CssClass="ss-aof-input" Text="65"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfvProductId" runat="server"
+                                ControlToValidate="txtProductId"
+                                ErrorMessage="Product ID is required"
                                 CssClass="ss-val-text"
                                 Display="Dynamic"
                                 EnableClientScript="false" />

@@ -109,7 +109,7 @@
 
                     <div class="ss-topbar-right">
                         <!-- User Storefront Return Button -->
-                        <a href="Categories.aspx" class="ss-btn-user-side">
+                        <a href="Default.aspx" class="ss-btn-user-side">
                             <i class="fa-solid fa-store"></i> User Side
                         </a>
 

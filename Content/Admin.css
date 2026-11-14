@@ -40,10 +40,13 @@ body {
 
 .ss-brand-text {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 600;
     color: #FFFFFF;
     letter-spacing: 0.3px;
+}
+.text{
+    font-size:20px;
 }
 
 /* Nav Menu */
@@ -90,7 +93,7 @@ body {
 .ss-nav-section-title {
     display: block;
     padding: 0 24px 14px 24px;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
     color: #E2B2B9;

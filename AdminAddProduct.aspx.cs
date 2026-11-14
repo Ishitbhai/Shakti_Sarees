@@ -10,7 +10,6 @@ namespace Shakti_Sarees
         {
         }
 
-        // Standard syllabus validation: Verify FileUpload control has a file selected on postback
         protected void cvMainImage_ServerValidate(object source, ServerValidateEventArgs args)
         {
             args.IsValid = fuMainImage.HasFile;
@@ -20,7 +19,6 @@ namespace Shakti_Sarees
         {
             if (Page.IsValid)
             {
-                // In Phase 2: Save uploaded image or set default: "/images/home_main.png"
                 Response.Redirect("AdminProducts.aspx");
             }
         }

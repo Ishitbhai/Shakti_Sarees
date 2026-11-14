@@ -40,31 +40,31 @@
                         <li>
                             <a href="AdminDashboard.aspx" class="ss-nav-item">
                                 <i class="fa-solid fa-shapes"></i>
-                                <span>Dashboard</span>
+                                <span class="text">Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="AdminProducts.aspx" class="ss-nav-item">
                                 <i class="fa-solid fa-box-archive"></i>
-                                <span>Manage Products</span>
+                                <span class="text">Manage Products</span>
                             </a>
                         </li>
                         <li>
                             <a href="AdminCategories.aspx" class="ss-nav-item">
                                 <i class="fa-solid fa-network-wired"></i>
-                                <span>Manage Categories</span>
+                                <span class="text">Manage Categories</span>
                             </a>
                         </li>
                         <li>
                             <a href="AdminOrders.aspx" class="ss-nav-item">
                                 <i class="fa-regular fa-clipboard"></i>
-                                <span>Manage Orders</span>
+                                <span class="text">Manage Orders</span>
                             </a>
                         </li>
                         <li>
                             <a href="AdminUsers.aspx" class="ss-nav-item">
                                 <i class="fa-solid fa-user-group"></i>
-                                <span>Manage Users</span>
+                                <span class="text">Manage Users</span>
                             </a>
                         </li>
                     </ul>
@@ -78,19 +78,19 @@
                         <li>
                             <a href="AdminAbout.aspx" class="ss-nav-item">
                                 <i class="fa-solid fa-circle-info"></i>
-                                <span>Manage About</span>
+                                <span class="text">Manage About</span>
                             </a>
                         </li>
                         <li>
                             <a href="AdminContact.aspx" class="ss-nav-item">
                                 <i class="fa-regular fa-circle-question"></i>
-                                <span>Manage Contact</span>
+                                <span class="text">Manage Contact</span>
                             </a>
                         </li>
                         <li>
                             <a href="AdminChangePassword.aspx" class="ss-nav-item">
                                 <i class="fa-solid fa-rotate-left"></i>
-                                <span>Change Password</span>
+                                <span class="text">Change Password</span>
                             </a>
                         </li>
                     </ul>

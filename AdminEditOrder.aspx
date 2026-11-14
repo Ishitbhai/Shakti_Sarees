@@ -35,7 +35,7 @@
 
                     <div class="ss-aof-col">
                         <label class="ss-aof-label">Order Date</label>
-                        <asp:TextBox ID="txtOrderDate" runat="server" CssClass="ss-aof-input" Text="01/08/2026"></asp:TextBox>
+                        <asp:TextBox ID="txtOrderDate" runat="server" CssClass="ss-aof-input" TextMode="Date"></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvOrderDate" runat="server"
                             ControlToValidate="txtOrderDate"

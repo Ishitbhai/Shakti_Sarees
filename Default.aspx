@@ -12,7 +12,7 @@
             <div class="ss-hero-overlay">
                 <span class="ss-hero-eyebrow">EVERYDAY ELEGANCE</span>
                 <h1 class="ss-hero-title">Pure Cotton Comfort</h1>
-                <a href="home_main.png" class="ss-hero-btn">Explore Cotton</a>
+                <a href="Products.aspx?category=Cotton" class="ss-hero-btn">Explore Cotton</a>
             </div>
         </section>
 

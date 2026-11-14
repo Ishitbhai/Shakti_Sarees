@@ -45,7 +45,7 @@
             
             <div class="ss-ro-header">
                 <h2 class="ss-ro-title">Recent Orders</h2>
-                <a href="ManageOrders.aspx" class="ss-ro-view-all">VIEW ALL &rarr;</a>
+                <a href="AdminOrders.aspx" class="ss-ro-view-all">VIEW ALL &rarr;</a>
             </div>
 
             <!-- Table Header -->
@@ -69,7 +69,7 @@
             <!-- Row 2 -->
             <div class="ss-ro-row">
                 <span class="ss-col-oid ss-oid-val">#31</span>
-                <span class="ss-col-cust">Raj Patel</span>
+                <span class="ss-col-cust">Rohit Sharma</span>
                 <span class="ss-col-date">Oct 23, 2023</span>
                 <span class="ss-col-amt ss-bold">&#8377;4,570</span>
                 <span class="ss-col-stat"><span class="ss-badge-proc">PROCESSING</span></span>
@@ -78,7 +78,7 @@
             <!-- Row 3 -->
             <div class="ss-ro-row">
                 <span class="ss-col-oid ss-oid-val">#30</span>
-                <span class="ss-col-cust">Aayush Suyani</span>
+                <span class="ss-col-cust">MSD</span>
                 <span class="ss-col-date">Oct 23, 2023</span>
                 <span class="ss-col-amt ss-bold">&#8377;55,657</span>
                 <span class="ss-col-stat"><span class="ss-badge-proc">PROCESSING</span></span>

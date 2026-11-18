@@ -69,57 +69,12 @@ namespace Shakti_Sarees
         protected global::System.Web.UI.WebControls.Literal litPageTitle;
 
         /// <summary>
-        /// btnAdd1 control.
+        /// rptProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAdd1;
-
-        /// <summary>
-        /// btnAdd2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAdd2;
-
-        /// <summary>
-        /// btnAdd3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAdd3;
-
-        /// <summary>
-        /// btnAdd4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAdd4;
-
-        /// <summary>
-        /// btnAdd5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAdd5;
-
-        /// <summary>
-        /// btnAdd6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAdd6;
+        protected global::System.Web.UI.WebControls.Repeater rptProducts;
     }
 }

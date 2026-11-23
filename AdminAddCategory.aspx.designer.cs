@@ -15,6 +15,15 @@ namespace Shakti_Sarees
     {
 
         /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
+
+        /// <summary>
         /// txtCategoryName control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,42 @@ namespace Shakti_Sarees
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revCategoryName;
 
         /// <summary>
+        /// fuCategoryImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuCategoryImage;
+
+        /// <summary>
+        /// cvCategoryImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvCategoryImage;
+
+        /// <summary>
+        /// rbActive control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbActive;
+
+        /// <summary>
+        /// rbInactive control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbInactive;
+
+        /// <summary>
         /// btnSaveCategory control.
         /// </summary>
         /// <remarks>
@@ -49,5 +94,7 @@ namespace Shakti_Sarees
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnSaveCategory;
+        protected global::System.Web.UI.WebControls.Repeater rptCategories;
+        protected global::System.Web.UI.WebControls.Repeater rptNewArrivals;
     }
 }

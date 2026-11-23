@@ -7,16 +7,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="ss-profile-viewport">
 
-        <!-- 1. Top Summary Card -->
+        <!-- 1. Top Summary Card (100% Dynamic from Users Table) -->
         <div class="ss-profile-card">
             
             <h1 class="ss-prof-name">
-                <asp:Literal ID="litFullName" runat="server" Text="Ishit Vadhavana"></asp:Literal>
+                <asp:Literal ID="litFullName" runat="server"></asp:Literal>
             </h1>
 
             <div class="ss-prof-email-row">
                 <i class="fa-regular fa-envelope ss-email-icon"></i>
-                <asp:Literal ID="litEmail" runat="server" Text="ishit@gmail.com"></asp:Literal>
+                <asp:Literal ID="litEmail" runat="server"></asp:Literal>
             </div>
 
             <div class="ss-prof-info-grid">
@@ -28,7 +28,7 @@
                     <div class="ss-info-text">
                         <span class="ss-info-label">MOBILE</span>
                         <span class="ss-info-val">
-                            <asp:Literal ID="litMobile" runat="server" Text="+91 84600 65647"></asp:Literal>
+                            <asp:Literal ID="litMobile" runat="server"></asp:Literal>
                         </span>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="ss-info-text">
                         <span class="ss-info-label">PRIMARY ADDRESS</span>
                         <span class="ss-info-val">
-                            <asp:Literal ID="litAddress" runat="server" Text="Rajkot, 360005"></asp:Literal>
+                            <asp:Literal ID="litAddress" runat="server"></asp:Literal>
                         </span>
                     </div>
                 </div>

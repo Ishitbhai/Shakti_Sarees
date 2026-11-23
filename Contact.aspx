@@ -5,81 +5,79 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="ss-contact-viewport">
+    <asp:Panel ID="pnlContactWrapper" runat="server" Visible="false">
+        <div class="ss-contact-viewport">
 
-        <!-- Header Introduction -->
-        <header class="ss-contact-header">
-            <div class="ss-contact-eyebrow">
-                <span class="ss-contact-eyebrow-line"></span>
-                <span class="ss-contact-eyebrow-text">CONNECT WITH US</span>
-            </div>
+            <!-- Header Introduction (100% Dynamic from PageContact) -->
+            <header class="ss-contact-header">
+                <div class="ss-contact-eyebrow">
+                    <span class="ss-contact-eyebrow-line"></span>
+                    <span class="ss-contact-eyebrow-text">CONNECT WITH US</span>
+                </div>
 
-            <h1 class="ss-contact-title">
-                Let's weave something <br />
-                <span class="ss-contact-highlight">beautiful together.</span>
-            </h1>
+                <h1 class="ss-contact-title">
+                    <asp:Literal ID="litPageTitle" runat="server"></asp:Literal>
+                </h1>
 
-            <p class="ss-contact-desc">
-                Whether you're looking for a specific heritage weave, have a question about our collections, or need assistance with a bespoke order, our team is here with traditional warmth and modern efficiency.
-            </p>
-        </header>
+                <p class="ss-contact-desc">
+                    <asp:Literal ID="litMainStory" runat="server"></asp:Literal>
+                </p>
+            </header>
 
-        <!-- Flagship Store Information Card -->
-        <div class="ss-store-card">
-            
-            <!-- Store Category Pill -->
-            <div class="ss-store-badge">
-                <i class="fa-solid fa-store ss-badge-icon"></i>
-                <span>FLAGSHIP STORE</span>
-            </div>
-
-            <!-- Address Block -->
-            <div class="ss-store-address">
-                <p>Tapeshwar Mandir Road,</p>
-                <p>Satta Bazar,</p>
-                <p>Veraval, Gujarat - 362265, India</p>
-            </div>
-
-            <!-- Contact Channels -->
-            <div class="ss-store-channels">
+            <!-- Flagship Store Information Card -->
+            <div class="ss-store-card">
                 
-                <!-- Phone -->
-                <div class="ss-channel-row">
-                    <div class="ss-channel-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="ss-channel-info">
-                        <span class="ss-channel-lbl">PHONE</span>
-                        <a href="tel:+918460065647" class="ss-channel-val">+91 84600 65647</a>
-                    </div>
+                <!-- Store Category Pill -->
+                <div class="ss-store-badge">
+                    <i class="fa-solid fa-store ss-badge-icon"></i>
+                    <span>FLAGSHIP STORE</span>
                 </div>
 
-                <!-- Email -->
-                <div class="ss-channel-row">
-                    <div class="ss-channel-icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div class="ss-channel-info">
-                        <span class="ss-channel-lbl">EMAIL</span>
-                        <a href="mailto:ishitvadhavana@gmail.com" class="ss-channel-val">ishitvadhavana@gmail.com</a>
-                    </div>
+                <!-- Address Block -->
+                <div class="ss-store-address">
+                    <asp:Literal ID="litAddress" runat="server"></asp:Literal>
                 </div>
 
-                <!-- Business Hours -->
-                <div class="ss-channel-row">
-                    <div class="ss-channel-icon">
-                        <i class="fa-regular fa-clock"></i>
+                <!-- Contact Channels -->
+                <div class="ss-store-channels">
+                    
+                    <!-- Phone -->
+                    <div class="ss-channel-row">
+                        <div class="ss-channel-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="ss-channel-info">
+                            <span class="ss-channel-lbl">PHONE</span>
+                            <asp:HyperLink ID="hlPhone" runat="server" CssClass="ss-channel-val"></asp:HyperLink>
+                        </div>
                     </div>
-                    <div class="ss-channel-info">
-                        <span class="ss-channel-lbl">BUSINESS HOURS</span>
-                        <span class="ss-channel-val">Mon - Sat: 10:00 AM - 8:00 PM</span>
-                        <span class="ss-channel-sub">Sunday: Closed</span>
+
+                    <!-- Email -->
+                    <div class="ss-channel-row">
+                        <div class="ss-channel-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="ss-channel-info">
+                            <span class="ss-channel-lbl">EMAIL</span>
+                            <asp:HyperLink ID="hlEmail" runat="server" CssClass="ss-channel-val"></asp:HyperLink>
+                        </div>
                     </div>
+
+                    <!-- Business Hours -->
+                    <div class="ss-channel-row">
+                        <div class="ss-channel-icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div class="ss-channel-info">
+                            <span class="ss-channel-lbl">BUSINESS HOURS</span>
+                            <asp:Literal ID="litBusinessHours" runat="server"></asp:Literal>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
-
-    </div>
+    </asp:Panel>
 </asp:Content>

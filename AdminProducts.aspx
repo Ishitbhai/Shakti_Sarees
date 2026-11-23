@@ -18,7 +18,7 @@
             </a>
         </div>
 
-        <!-- Inventory Table Card -->
+        <!-- Inventory Table Card (100% Dynamic from Products & Categories Tables) -->
         <div class="ss-mp-table-card">
             
             <!-- Table Header -->
@@ -33,173 +33,38 @@
                 <span class="ss-col-actions">Actions</span>
             </div>
 
-            <!-- Row 1: In Stock -->
-            <div class="ss-mp-data-row">
-                <div class="ss-col-img">
-                    <div class="ss-prod-thumb">
-                        <img src="/images/home_main.png" alt="Crimson Gold Kanjeevaram" />
+            <asp:Repeater ID="rptProducts" runat="server">
+                <ItemTemplate>
+                    <div class="ss-mp-data-row">
+                        <div class="ss-col-img">
+                            <div class="ss-prod-thumb">
+                                <img src='<%# Eval("MainImage") %>' alt='<%# Eval("ProductName") %>' />
+                            </div>
+                        </div>
+                        <span class="ss-col-id">#<%# Eval("ProductID") %></span>
+                        <span class="ss-col-name"><%# Eval("ProductName") %></span>
+                        <span class="ss-col-cat"><%# Eval("CategoryName") %></span>
+                        <span class="ss-col-price">&#8377; <%# Eval("Price") %></span>
+                        <span class="ss-col-stock"><%# Eval("StockQuantity") %></span>
+                        <div class="ss-col-status">
+                            <span class='<%# Convert.ToInt32(Eval("StockQuantity")) > 0 && Eval("Status").ToString() == "Active" ? "ss-badge-instock" : "ss-badge-outstock" %>'>
+                                <%# Eval("Status").ToString() == "Inactive" ? "INACTIVE" : (Convert.ToInt32(Eval("StockQuantity")) > 0 ? "IN STOCK" : "OUT OF STOCK") %>
+                            </span>
+                        </div>
+                        <div class="ss-col-actions">
+                            <a href='AdminEditProduct.aspx?id=<%# Eval("ProductID") %>' class="ss-action-btn ss-edit-btn" title="Edit">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
+                            <asp:LinkButton ID="btnDelete" runat="server" CssClass="ss-action-btn ss-delete-btn"
+                                OnClick="btnDelete_Click" CommandArgument='<%# Eval("ProductID") %>'
+                                OnClientClick="return confirm('Are you sure you want to delete this product?');"
+                                ToolTip="Delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </asp:LinkButton>
+                        </div>
                     </div>
-                </div>
-                <span class="ss-col-id">#1</span>
-                <span class="ss-col-name">Crimson Gold Kanjeevaram</span>
-                <span class="ss-col-cat">Kanjeevaram</span>
-                <span class="ss-col-price">&#8377; 24,500</span>
-                <span class="ss-col-stock">12</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-instock">IN STOCK</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditProduct.aspx?id=101" class="ss-action-btn ss-edit-btn" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <asp:LinkButton ID="btnDelete1" runat="server" CssClass="ss-action-btn ss-delete-btn"
-                        OnClick="btnDelete_Click" CommandArgument="101"
-                        OnClientClick="return confirm('Are you sure you want to delete this product?');"
-                        ToolTip="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </asp:LinkButton>
-                </div>
-            </div>
-
-            <!-- Row 2: In Stock -->
-            <div class="ss-mp-data-row">
-                <div class="ss-col-img">
-                    <div class="ss-prod-thumb">
-                        <img src="/images/home_main.png" alt="Kasavu Cotton Classic" />
-                    </div>
-                </div>
-                <span class="ss-col-id">#2</span>
-                <span class="ss-col-name">Kasavu Cotton Classic</span>
-                <span class="ss-col-cat">Cotton</span>
-                <span class="ss-col-price">&#8377; 3,200</span>
-                <span class="ss-col-stock">2</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-instock">IN STOCK</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditProduct.aspx?id=102" class="ss-action-btn ss-edit-btn" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <asp:LinkButton ID="btnDelete2" runat="server" CssClass="ss-action-btn ss-delete-btn"
-                        OnClick="btnDelete_Click" CommandArgument="102"
-                        OnClientClick="return confirm('Are you sure you want to delete this product?');"
-                        ToolTip="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </asp:LinkButton>
-                </div>
-            </div>
-
-            <!-- Row 3: Out of Stock -->
-            <div class="ss-mp-data-row">
-                <div class="ss-col-img">
-                    <div class="ss-prod-thumb">
-                        <img src="/images/home_main.png" alt="Emerald Flora Banarasi" />
-                    </div>
-                </div>
-                <span class="ss-col-id">#3</span>
-                <span class="ss-col-name">Emerald Flora Banarasi</span>
-                <span class="ss-col-cat">Banarasi</span>
-                <span class="ss-col-price">&#8377; 18,900</span>
-                <span class="ss-col-stock">0</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-outstock">OUT OF STOCK</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditProduct.aspx?id=103" class="ss-action-btn ss-edit-btn" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <asp:LinkButton ID="btnDelete3" runat="server" CssClass="ss-action-btn ss-delete-btn"
-                        OnClick="btnDelete_Click" CommandArgument="103"
-                        OnClientClick="return confirm('Are you sure you want to delete this product?');"
-                        ToolTip="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </asp:LinkButton>
-                </div>
-            </div>
-
-            <!-- Row 4: In Stock -->
-            <div class="ss-mp-data-row">
-                <div class="ss-col-img">
-                    <div class="ss-prod-thumb">
-                        <img src="/images/home_main.png" alt="Crimson Gold Kanjeevaram" />
-                    </div>
-                </div>
-                <span class="ss-col-id">#4</span>
-                <span class="ss-col-name">Crimson Gold Kanjeevaram</span>
-                <span class="ss-col-cat">Kanjeevaram</span>
-                <span class="ss-col-price">&#8377; 24,500</span>
-                <span class="ss-col-stock">12</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-instock">IN STOCK</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditProduct.aspx?id=101" class="ss-action-btn ss-edit-btn" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <asp:LinkButton ID="btnDelete4" runat="server" CssClass="ss-action-btn ss-delete-btn"
-                        OnClick="btnDelete_Click" CommandArgument="101"
-                        OnClientClick="return confirm('Are you sure you want to delete this product?');"
-                        ToolTip="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </asp:LinkButton>
-                </div>
-            </div>
-
-            <!-- Row 5: In Stock -->
-            <div class="ss-mp-data-row">
-                <div class="ss-col-img">
-                    <div class="ss-prod-thumb">
-                        <img src="/images/home_main.png" alt="Kasavu Cotton Classic" />
-                    </div>
-                </div>
-                <span class="ss-col-id">#5</span>
-                <span class="ss-col-name">Kasavu Cotton Classic</span>
-                <span class="ss-col-cat">Cotton</span>
-                <span class="ss-col-price">&#8377; 3,200</span>
-                <span class="ss-col-stock">2</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-instock">IN STOCK</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditProduct.aspx?id=102" class="ss-action-btn ss-edit-btn" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <asp:LinkButton ID="btnDelete5" runat="server" CssClass="ss-action-btn ss-delete-btn"
-                        OnClick="btnDelete_Click" CommandArgument="102"
-                        OnClientClick="return confirm('Are you sure you want to delete this product?');"
-                        ToolTip="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </asp:LinkButton>
-                </div>
-            </div>
-
-            <!-- Row 6: Out of Stock -->
-            <div class="ss-mp-data-row">
-                <div class="ss-col-img">
-                    <div class="ss-prod-thumb">
-                        <img src="/images/home_main.png" alt="Emerald Flora Banarasi" />
-                    </div>
-                </div>
-                <span class="ss-col-id">#6</span>
-                <span class="ss-col-name">Emerald Flora Banarasi</span>
-                <span class="ss-col-cat">Banarasi</span>
-                <span class="ss-col-price">&#8377; 18,900</span>
-                <span class="ss-col-stock">0</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-outstock">OUT OF STOCK</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditProduct.aspx?id=103" class="ss-action-btn ss-edit-btn" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <asp:LinkButton ID="btnDelete6" runat="server" CssClass="ss-action-btn ss-delete-btn"
-                        OnClick="btnDelete_Click" CommandArgument="103"
-                        OnClientClick="return confirm('Are you sure you want to delete this product?');"
-                        ToolTip="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </asp:LinkButton>
-                </div>
-            </div>
+                </ItemTemplate>
+            </asp:Repeater>
 
         </div>
 

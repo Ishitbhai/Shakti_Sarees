@@ -55,17 +55,11 @@
                             EnableClientScript="false" />
                     </div>
 
-                    <!-- Category Dropdown -->
+                    <!-- Category Dropdown (100% Dynamic from Categories Table) -->
                     <div class="ss-ap-field">
                         <label class="ss-ap-label">Category <span class="ss-req">*</span></label>
-                        <asp:DropDownList ID="ddlCategory" runat="server" CssClass="ss-ap-select">
+                        <asp:DropDownList ID="ddlCategory" runat="server" CssClass="ss-ap-select" DataTextField="CategoryName" DataValueField="CategoryID" AppendDataBoundItems="true">
                             <asp:ListItem Text="Select category" Value=""></asp:ListItem>
-                            <asp:ListItem Text="Banarasi Silk" Value="Banarasi"></asp:ListItem>
-                            <asp:ListItem Text="Kanchipuram Grand" Value="Kanchipuram"></asp:ListItem>
-                            <asp:ListItem Text="Chiffon" Value="Chiffon"></asp:ListItem>
-                            <asp:ListItem Text="Cotton Handloom" Value="Cotton"></asp:ListItem>
-                            <asp:ListItem Text="Bandhni" Value="Bandhni"></asp:ListItem>
-                            <asp:ListItem Text="Georgette" Value="Georgette"></asp:ListItem>
                         </asp:DropDownList>
 
                         <asp:RequiredFieldValidator ID="rfvCategory" runat="server"
@@ -218,7 +212,7 @@
                     </div>
                 </div>
 
-                <!-- Visibility Status Card -->
+                <!-- Visibility & New Arrival Status Card -->
                 <div class="ss-ap-card ss-visibility-card">
                     <div class="ss-ap-card-header">
                         <i class="fa-regular fa-eye ss-ap-side-icon"></i>
@@ -226,7 +220,7 @@
                     </div>
 
                     <div class="ss-status-option">
-                        <input type="radio" id="rbPublished" name="statusOption" value="Published" checked="checked" />
+                        <input type="radio" id="rbPublished" runat="server" name="statusOption" value="Published" checked="true" />
                         <div class="ss-status-info">
                             <label for="rbPublished" class="ss-status-lbl">Published</label>
                             <span class="ss-status-desc">Product will be visible on the store immediately.</span>
@@ -234,10 +228,34 @@
                     </div>
 
                     <div class="ss-status-option">
-                        <input type="radio" id="rbDraft" name="statusOption" value="Draft" />
+                        <input type="radio" id="rbDraft" runat="server" name="statusOption" value="Draft" />
                         <div class="ss-status-info">
                             <label for="rbDraft" class="ss-status-lbl">Draft</label>
                             <span class="ss-status-desc">Save as draft. Hidden from customers.</span>
+                        </div>
+                    </div>
+
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 18px 0;" />
+
+                    <!-- New Arrival (0 or 1) Section -->
+                    <div class="ss-ap-card-header" style="margin-bottom: 12px;">
+                        <i class="fa-solid fa-wand-magic-sparkles ss-ap-side-icon"></i>
+                        <h2 class="ss-ap-card-title">New Arrival (Home Page)</h2>
+                    </div>
+
+                    <div class="ss-status-option">
+                        <input type="radio" id="rbNewArrivalYes" runat="server" name="newArrivalOption" value="1" />
+                        <div class="ss-status-info">
+                            <label for="rbNewArrivalYes" class="ss-status-lbl">Yes (Show in New Arrivals)</label>
+                            <span class="ss-status-desc">Sets NewArrival = 1 to feature on Default.aspx.</span>
+                        </div>
+                    </div>
+
+                    <div class="ss-status-option">
+                        <input type="radio" id="rbNewArrivalNo" runat="server" name="newArrivalOption" value="0" checked="true" />
+                        <div class="ss-status-info">
+                            <label for="rbNewArrivalNo" class="ss-status-lbl">No (Standard Product)</label>
+                            <span class="ss-status-desc">Sets NewArrival = 0 (shown in Shop / Category pages only).</span>
                         </div>
                     </div>
                 </div>

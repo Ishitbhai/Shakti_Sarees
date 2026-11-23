@@ -15,7 +15,7 @@
 
         <div class="ss-checkout-layout">
             
-            <!-- ================= LEFT COLUMN: READONLY DETAILS ================= -->
+            <!-- ================= LEFT COLUMN: READONLY DETAILS (FROM USERS TABLE) ================= -->
             <div class="ss-checkout-info-col">
                 
                 <!-- Section 1: Address -->
@@ -26,22 +26,22 @@
 
                 <div class="ss-static-field">
                     <label class="ss-field-lbl">FULL NAME</label>
-                    <asp:TextBox ID="txtFullName" runat="server" CssClass="ss-static-input" ReadOnly="true" Text="Ishit Vadhavana"></asp:TextBox>
+                    <asp:TextBox ID="txtFullName" runat="server" CssClass="ss-static-input" ReadOnly="true"></asp:TextBox>
                 </div>
 
                 <div class="ss-static-field">
                     <label class="ss-field-lbl">LOCAL ADDRESS</label>
-                    <asp:TextBox ID="txtAddress" runat="server" CssClass="ss-static-input" ReadOnly="true" Text="Samras Boys Hostel"></asp:TextBox>
+                    <asp:TextBox ID="txtAddress" runat="server" CssClass="ss-static-input" ReadOnly="true"></asp:TextBox>
                 </div>
 
                 <div class="ss-static-row">
                     <div class="ss-static-col">
                         <label class="ss-field-lbl">CITY</label>
-                        <asp:TextBox ID="txtCity" runat="server" CssClass="ss-static-input" ReadOnly="true" Text="Rajkot"></asp:TextBox>
+                        <asp:TextBox ID="txtCity" runat="server" CssClass="ss-static-input" ReadOnly="true"></asp:TextBox>
                     </div>
                     <div class="ss-static-col">
                         <label class="ss-field-lbl">PINCODE</label>
-                        <asp:TextBox ID="txtPincode" runat="server" CssClass="ss-static-input" ReadOnly="true" Text="360005"></asp:TextBox>
+                        <asp:TextBox ID="txtPincode" runat="server" CssClass="ss-static-input" ReadOnly="true"></asp:TextBox>
                     </div>
                 </div>
 
@@ -56,12 +56,12 @@
                         <label class="ss-field-lbl">MOBILE NUMBER</label>
                         <div class="ss-phone-wrapper">
                             <span class="ss-phone-prefix">+91</span>
-                            <asp:TextBox ID="txtMobile" runat="server" CssClass="ss-static-input ss-phone-input" ReadOnly="true" Text="8460065647"></asp:TextBox>
+                            <asp:TextBox ID="txtMobile" runat="server" CssClass="ss-static-input ss-phone-input" ReadOnly="true"></asp:TextBox>
                         </div>
                     </div>
                     <div class="ss-static-col">
                         <label class="ss-field-lbl">EMAIL ADDRESS</label>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-static-input" ReadOnly="true" Text="ishit@gmail.com"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-static-input" ReadOnly="true"></asp:TextBox>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
 
             </div>
 
-            <!-- ================= RIGHT COLUMN: SUMMARY & PAYMENT ================= -->
+            <!-- ================= RIGHT COLUMN: SUMMARY & PAYMENT (FROM CART TABLE) ================= -->
             <div class="ss-checkout-side-col">
                 
                 <!-- Order Summary Card -->
@@ -79,30 +79,22 @@
                     <h3 class="ss-chk-card-title">Order Summary</h3>
 
                     <div class="ss-chk-items">
-                        
-                        <!-- Item 1 -->
-                        <div class="ss-chk-item-row">
-                            <img src="/images/cart_1.png" alt="Royal Maroon" class="ss-chk-item-img" />
-                            <div class="ss-chk-item-meta">
-                                <span class="ss-chk-item-name">Royal Maroon Zari Woven Saree</span>
-                                <span class="ss-chk-item-price">&#8377; 12,499</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 2 -->
-                        <div class="ss-chk-item-row">
-                            <img src="/images/cart_2.png" alt="Emerald Green" class="ss-chk-item-img" />
-                            <div class="ss-chk-item-meta">
-                                <span class="ss-chk-item-name">Emerald Green Peacock Border</span>
-                                <span class="ss-chk-item-price">&#8377; 37,900</span>
-                            </div>
-                        </div>
-
+                        <asp:Repeater ID="rptCheckoutItems" runat="server">
+                            <ItemTemplate>
+                                <div class="ss-chk-item-row">
+                                    <img src='<%# Eval("MainImage") %>' alt='<%# Eval("ProductName") %>' class="ss-chk-item-img" />
+                                    <div class="ss-chk-item-meta">
+                                        <span class="ss-chk-item-name"><%# Eval("ProductName") %> (x<%# Eval("Quantity") %>)</span>
+                                        <span class="ss-chk-item-price">&#8377; <%# Eval("ItemTotal") %></span>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
 
                     <div class="ss-chk-bill-row">
                         <span>Subtotal</span>
-                        <span>&#8377; 50,399</span>
+                        <span>&#8377; <asp:Literal ID="litSubtotal" runat="server" Text="0.00"></asp:Literal></span>
                     </div>
                     <div class="ss-chk-bill-row">
                         <span>Shipping</span>
@@ -110,12 +102,12 @@
                     </div>
                     <div class="ss-chk-bill-row">
                         <span>Taxes (GST 5%)</span>
-                        <span>&#8377; 1,035</span>
+                        <span>&#8377; <asp:Literal ID="litTaxes" runat="server" Text="0.00"></asp:Literal></span>
                     </div>
 
                     <div class="ss-chk-total-row">
                         <span class="ss-chk-total-lbl">Total</span>
-                        <span class="ss-chk-total-val">&#8377;51,434</span>
+                        <span class="ss-chk-total-val">&#8377;<asp:Literal ID="litTotal" runat="server" Text="0.00"></asp:Literal></span>
                     </div>
                 </div>
 

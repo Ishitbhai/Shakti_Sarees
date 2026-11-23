@@ -13,14 +13,18 @@
             <p class="ss-prof-subtitle">Manage your personal information and administrative access.</p>
         </div>
 
-        <!-- Card 1: Identity & Contact Info -->
+        <!-- Card 1: Identity & Contact Info (100% Dynamic from Users Table) -->
         <div class="ss-prof-card">
             <!-- Name and Email Header -->
             <div class="ss-prof-meta">
-                <h2 class="ss-prof-name">Ishit Vadhavana</h2>
+                <h2 class="ss-prof-name">
+                    <asp:Literal ID="litAdminName" runat="server"></asp:Literal>
+                </h2>
                 <div class="ss-prof-email">
                     <i class="fa-regular fa-envelope ss-icon-maroon"></i>
-                    <span>ishit@gmail.com</span>
+                    <span>
+                        <asp:Literal ID="litAdminEmail" runat="server"></asp:Literal>
+                    </span>
                 </div>
             </div>
 
@@ -33,7 +37,9 @@
                     </div>
                     <div class="ss-box-text">
                         <span class="ss-box-lbl">MOBILE</span>
-                        <span class="ss-box-val">+91 84600 65647</span>
+                        <span class="ss-box-val">
+                            <asp:Literal ID="litAdminMobile" runat="server"></asp:Literal>
+                        </span>
                     </div>
                 </div>
 
@@ -44,7 +50,9 @@
                     </div>
                     <div class="ss-box-text">
                         <span class="ss-box-lbl">PRIMARY ADDRESS</span>
-                        <span class="ss-box-val">Rajkot, 360005</span>
+                        <span class="ss-box-val">
+                            <asp:Literal ID="litAdminAddress" runat="server"></asp:Literal>
+                        </span>
                     </div>
                 </div>
             </div>

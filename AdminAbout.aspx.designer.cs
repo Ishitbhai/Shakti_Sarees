@@ -60,6 +60,15 @@ namespace Shakti_Sarees
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMainStory;
 
         /// <summary>
+        /// hfFeatureIcon1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfFeatureIcon1;
+
+        /// <summary>
         /// fuFeatureIcon1 control.
         /// </summary>
         /// <remarks>
@@ -103,6 +112,15 @@ namespace Shakti_Sarees
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFeature1Desc;
+
+        /// <summary>
+        /// hfFeatureIcon2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfFeatureIcon2;
 
         /// <summary>
         /// fuFeatureIcon2 control.
@@ -157,6 +175,24 @@ namespace Shakti_Sarees
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfAboutImage;
+
+        /// <summary>
+        /// imgHeroPreview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgHeroPreview;
+
+        /// <summary>
+        /// icoPlaceholder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl icoPlaceholder;
 
         /// <summary>
         /// fuAboutImage control.

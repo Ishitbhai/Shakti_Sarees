@@ -26,7 +26,7 @@
             <!-- ================= LEFT COLUMN ================= -->
             <div class="ss-abt-main-col">
 
-                <!-- 1. Core Content Card -->
+                <!-- 1. Core Content Card (100% Dynamic from PageAbout Table) -->
                 <div class="ss-abt-card">
                     <div class="ss-abt-card-header">
                         <i class="fa-regular fa-file-lines ss-abt-icon"></i>
@@ -36,7 +36,7 @@
                     <!-- Page Title -->
                     <div class="ss-abt-field">
                         <label class="ss-abt-label">Page Title</label>
-                        <asp:TextBox ID="txtPageTitle" runat="server" CssClass="ss-abt-input" Text="Elegance In Every Thread"></asp:TextBox>
+                        <asp:TextBox ID="txtPageTitle" runat="server" CssClass="ss-abt-input" Placeholder="Enter page title"></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvPageTitle" runat="server"
                             ControlToValidate="txtPageTitle"
@@ -49,8 +49,7 @@
                     <!-- Main Story (Rich Text) -->
                     <div class="ss-abt-field ss-field-last">
                         <label class="ss-abt-label">Main Story (Rich Text)</label>
-                        <asp:TextBox ID="txtMainStory" runat="server" TextMode="MultiLine" Rows="11" CssClass="ss-abt-textarea"
-                            Text="For over three decades, Shakti Saree has been the custodian of India's rich, textile heritage. We don't merely sell garments; we curate stories woven by master artisans across the subcontinent.&#10;&#10;From the royal, intricate looms of Banaras to the delicate, breathable craft of fine handloom cottons, our collection is a testament to accessible elegance. We bridge the gap between traditional craftsmanship and modern sensibilities, ensuring every piece you wear is a masterpiece of uncompromising quality."></asp:TextBox>
+                        <asp:TextBox ID="txtMainStory" runat="server" TextMode="MultiLine" Rows="11" CssClass="ss-abt-textarea" Placeholder="Enter main brand story..."></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvMainStory" runat="server"
                             ControlToValidate="txtMainStory"
@@ -73,6 +72,7 @@
                         <div class="ss-feature-row">
                             <div class="ss-feature-col-icon">
                                 <span class="ss-mini-label">ICON</span>
+                                <asp:HiddenField ID="hfFeatureIcon1" runat="server" />
                                 <div class="ss-icon-upload-slot">
                                     <i class="fa-regular fa-image"></i>
                                     <asp:FileUpload ID="fuFeatureIcon1" runat="server" CssClass="ss-hidden-file" />
@@ -80,7 +80,7 @@
                             </div>
                             <div class="ss-feature-col-heading">
                                 <span class="ss-mini-label">HEADING</span>
-                                <asp:TextBox ID="txtFeature1Heading" runat="server" CssClass="ss-abt-input" Text="Uncompromising Quality"></asp:TextBox>
+                                <asp:TextBox ID="txtFeature1Heading" runat="server" CssClass="ss-abt-input" Placeholder="Feature 1 Heading"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvFeature1Heading" runat="server"
                                     ControlToValidate="txtFeature1Heading"
                                     ErrorMessage="Heading is required"
@@ -91,8 +91,7 @@
                         </div>
                         <div class="ss-feature-desc-wrap">
                             <span class="ss-mini-label">BRIEF DESCRIPTION</span>
-                            <asp:TextBox ID="txtFeature1Desc" runat="server" TextMode="MultiLine" Rows="2" CssClass="ss-abt-textarea ss-desc-box"
-                                Text="Each saree undergoes a rigorous multi-point inspection process to ensure the fabric, zari, and finish meet boutique standards."></asp:TextBox>
+                            <asp:TextBox ID="txtFeature1Desc" runat="server" TextMode="MultiLine" Rows="2" CssClass="ss-abt-textarea ss-desc-box" Placeholder="Feature 1 Description"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvFeature1Desc" runat="server"
                                 ControlToValidate="txtFeature1Desc"
                                 ErrorMessage="Brief description is required"
@@ -107,6 +106,7 @@
                         <div class="ss-feature-row">
                             <div class="ss-feature-col-icon">
                                 <span class="ss-mini-label">ICON</span>
+                                <asp:HiddenField ID="hfFeatureIcon2" runat="server" />
                                 <div class="ss-icon-upload-slot">
                                     <i class="fa-regular fa-image"></i>
                                     <asp:FileUpload ID="fuFeatureIcon2" runat="server" CssClass="ss-hidden-file" />
@@ -114,7 +114,7 @@
                             </div>
                             <div class="ss-feature-col-heading">
                                 <span class="ss-mini-label">HEADING</span>
-                                <asp:TextBox ID="txtFeature2Heading" runat="server" CssClass="ss-abt-input" Text="Seamless Delivery"></asp:TextBox>
+                                <asp:TextBox ID="txtFeature2Heading" runat="server" CssClass="ss-abt-input" Placeholder="Feature 2 Heading"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvFeature2Heading" runat="server"
                                     ControlToValidate="txtFeature2Heading"
                                     ErrorMessage="Heading is required"
@@ -125,8 +125,7 @@
                         </div>
                         <div class="ss-feature-desc-wrap">
                             <span class="ss-mini-label">BRIEF DESCRIPTION</span>
-                            <asp:TextBox ID="txtFeature2Desc" runat="server" TextMode="MultiLine" Rows="2" CssClass="ss-abt-textarea ss-desc-box"
-                                Text="From our showroom to your doorstep, we provide secure, fully insured shipping with transparent tracking worldwide."></asp:TextBox>
+                            <asp:TextBox ID="txtFeature2Desc" runat="server" TextMode="MultiLine" Rows="2" CssClass="ss-abt-textarea ss-desc-box" Placeholder="Feature 2 Description"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvFeature2Desc" runat="server"
                                 ControlToValidate="txtFeature2Desc"
                                 ErrorMessage="Brief description is required"
@@ -149,11 +148,12 @@
                     </div>
 
                     <!-- Stored Image Reference -->
-                    <asp:HiddenField ID="hfAboutImage" runat="server" Value="/images/home_main.png" />
+                    <asp:HiddenField ID="hfAboutImage" runat="server" />
 
                     <!-- Upload Zone Matching Screenshot -->
-                    <div class="ss-abt-img-dropzone">
-                        <i class="fa-regular fa-image ss-zone-ph-icon"></i>
+                    <div class="ss-abt-img-dropzone" style="position:relative; overflow:hidden;">
+                        <asp:Image ID="imgHeroPreview" runat="server" Visible="false" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;" />
+                        <i id="icoPlaceholder" runat="server" class="fa-regular fa-image ss-zone-ph-icon"></i>
                         <asp:FileUpload ID="fuAboutImage" runat="server" CssClass="ss-hidden-file" />
                     </div>
 

@@ -25,7 +25,7 @@
 
         <div class="ss-ctc-layout">
 
-            <!-- ================= LEFT COLUMN: CORE CONTENT ================= -->
+            <!-- ================= LEFT COLUMN: CORE CONTENT (100% DYNAMIC) ================= -->
             <div class="ss-ctc-main-col">
                 <div class="ss-ctc-card">
                     <div class="ss-ctc-card-header">
@@ -36,7 +36,7 @@
                     <!-- Page Title -->
                     <div class="ss-ctc-field">
                         <label class="ss-ctc-label">Page Title</label>
-                        <asp:TextBox ID="txtPageTitle" runat="server" CssClass="ss-ctc-input" Text="Let's Weave Something beautiful together."></asp:TextBox>
+                        <asp:TextBox ID="txtPageTitle" runat="server" CssClass="ss-ctc-input" Placeholder="Enter page title"></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvPageTitle" runat="server"
                             ControlToValidate="txtPageTitle"
@@ -49,8 +49,7 @@
                     <!-- Main Story -->
                     <div class="ss-ctc-field ss-field-last">
                         <label class="ss-ctc-label">Main Story</label>
-                        <asp:TextBox ID="txtMainStory" runat="server" TextMode="MultiLine" Rows="8" CssClass="ss-ctc-textarea"
-                            Text="Whether you're looking for a specific heritage weave, have a question about our collections, or need assistance with a bespoke order, our team is here with traditional warmth and modern efficiency."></asp:TextBox>
+                        <asp:TextBox ID="txtMainStory" runat="server" TextMode="MultiLine" Rows="8" CssClass="ss-ctc-textarea" Placeholder="Enter main story description..."></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvMainStory" runat="server"
                             ControlToValidate="txtMainStory"
@@ -62,7 +61,7 @@
                 </div>
             </div>
 
-            <!-- ================= RIGHT COLUMN: CONTACTS ================= -->
+            <!-- ================= RIGHT COLUMN: CONTACTS (100% DYNAMIC) ================= -->
             <div class="ss-ctc-side-col">
                 <div class="ss-ctc-card">
                     <div class="ss-ctc-card-header">
@@ -73,8 +72,7 @@
                     <!-- Address -->
                     <div class="ss-ctc-field">
                         <label class="ss-ctc-label">Address</label>
-                        <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="4" CssClass="ss-ctc-textarea ss-compact-area"
-                            Text="Tapeshwar Mandir Road,&#10;Satta Bazar,&#10;Veraval, Gujarat - 362265,&#10;India"></asp:TextBox>
+                        <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="4" CssClass="ss-ctc-textarea ss-compact-area" Placeholder="Enter store address..."></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvAddress" runat="server"
                             ControlToValidate="txtAddress"
@@ -87,7 +85,7 @@
                     <!-- Phone -->
                     <div class="ss-ctc-field">
                         <label class="ss-ctc-label">Phone</label>
-                        <asp:TextBox ID="txtPhone" runat="server" CssClass="ss-ctc-input" Text="8460065647" MaxLength="10"></asp:TextBox>
+                        <asp:TextBox ID="txtPhone" runat="server" CssClass="ss-ctc-input" MaxLength="10" Placeholder="Enter 10-digit phone number"></asp:TextBox>
     
                         <asp:RequiredFieldValidator ID="rfvPhone" runat="server"
                             ControlToValidate="txtPhone"
@@ -108,7 +106,7 @@
                     <!-- Email -->
                     <div class="ss-ctc-field">
                         <label class="ss-ctc-label">Email</label>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-ctc-input" Text="ishitvadhavana@gmail.com"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-ctc-input" Placeholder="Enter contact email"></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvEmail" runat="server"
                             ControlToValidate="txtEmail"
@@ -128,8 +126,7 @@
                     <!-- Business Hours -->
                     <div class="ss-ctc-field ss-field-last">
                         <label class="ss-ctc-label">Business Hours</label>
-                        <asp:TextBox ID="txtBusinessHours" runat="server" TextMode="MultiLine" Rows="3" CssClass="ss-ctc-textarea ss-compact-area"
-                            Text="Mon - Sat: 10:00 AM - 8:00 PM&#10;Sunday: Closed"></asp:TextBox>
+                        <asp:TextBox ID="txtBusinessHours" runat="server" TextMode="MultiLine" Rows="3" CssClass="ss-ctc-textarea ss-compact-area" Placeholder="Enter business hours..."></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvBusinessHours" runat="server"
                             ControlToValidate="txtBusinessHours"

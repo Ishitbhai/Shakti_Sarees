@@ -18,7 +18,7 @@
             </a>
         </div>
 
-        <!-- Categories Table Card -->
+        <!-- Categories Table Card (100% Dynamic from Categories Table) -->
         <div class="ss-cat-card">
             
             <!-- Table Header -->
@@ -29,100 +29,30 @@
                 <span class="ss-col-cactions">ACTIONS</span>
             </div>
 
-            <!-- Row 1: Banarasi Silk -->
-            <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#1</span>
-                <span class="ss-col-cname ss-txt-dark">Banarasi Silk</span>
-                <div class="ss-col-cstatus">
-                    <span class="ss-badge-active">ACTIVE</span>
-                </div>
-                <div class="ss-col-cactions">
-                    <a href="AdminEditCategory.aspx?id=1" class="ss-cat-action-btn ss-cat-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-cat-action-btn ss-cat-delete"
-                       onclick="confirm('Are you sure you want to delete this category?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 2: Cotton Elegance -->
-            <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#2</span>
-                <span class="ss-col-cname ss-txt-dark">Cotton Elegance</span>
-                <div class="ss-col-cstatus">
-                    <span class="ss-badge-active">ACTIVE</span>
-                </div>
-                <div class="ss-col-cactions">
-                    <a href="AdminEditCategory.aspx?id=2" class="ss-cat-action-btn ss-cat-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-cat-action-btn ss-cat-delete"
-                       onclick="confirm('Are you sure you want to delete this category?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 3: Kanjivaram -->
-            <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#3</span>
-                <span class="ss-col-cname ss-txt-dark">Kanjivaram</span>
-                <div class="ss-col-cstatus">
-                    <span class="ss-badge-inactive">INACTIVE</span>
-                </div>
-                <div class="ss-col-cactions">
-                    <a href="AdminEditCategory.aspx?id=3" class="ss-cat-action-btn ss-cat-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-cat-action-btn ss-cat-delete"
-                       onclick="confirm('Are you sure you want to delete this category?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Row 4: Designer Georgette -->
-            <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#4</span>
-                <span class="ss-col-cname ss-txt-dark">Designer Georgette</span>
-                <div class="ss-col-cstatus">
-                    <span class="ss-badge-active">ACTIVE</span>
-                </div>
-                <div class="ss-col-cactions">
-                    <a href="AdminEditCategory.aspx?id=4" class="ss-cat-action-btn ss-cat-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-cat-action-btn ss-cat-delete"
-                       onclick="confirm('Are you sure you want to delete this category?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 5: Patola -->
-            <div class="ss-cat-row">
-                <span class="ss-col-cid ss-txt-muted">#5</span>
-                <span class="ss-col-cname ss-txt-dark">Patola</span>
-                <div class="ss-col-cstatus">
-                    <span class="ss-badge-active">ACTIVE</span>
-                </div>
-                <div class="ss-col-cactions">
-                    <a href="AdminEditCategory.aspx?id=4" class="ss-cat-action-btn ss-cat-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-cat-action-btn ss-cat-delete"
-                       onclick="confirm('Are you sure you want to delete this category?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
+            <asp:Repeater ID="rptCategories" runat="server">
+                <ItemTemplate>
+                    <div class="ss-cat-row">
+                        <span class="ss-col-cid ss-txt-muted">#<%# Eval("CategoryID") %></span>
+                        <span class="ss-col-cname ss-txt-dark"><%# Eval("CategoryName") %></span>
+                        <div class="ss-col-cstatus">
+                            <span class='<%# Eval("Status").ToString() == "Active" ? "ss-badge-active" : "ss-badge-inactive" %>'>
+                                <%# Eval("Status").ToString().ToUpper() %>
+                            </span>
+                        </div>
+                        <div class="ss-col-cactions">
+                            <a href='AdminEditCategory.aspx?id=<%# Eval("CategoryID") %>' class="ss-cat-action-btn ss-cat-edit" title="Edit">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
+                            <asp:LinkButton ID="btnDelete" runat="server" CssClass="ss-cat-action-btn ss-cat-delete"
+                                OnClick="btnDelete_Click" CommandArgument='<%# Eval("CategoryID") %>'
+                                OnClientClick="return confirm('Are you sure you want to delete this category?');"
+                                ToolTip="Delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </asp:LinkButton>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
 
         </div>
 

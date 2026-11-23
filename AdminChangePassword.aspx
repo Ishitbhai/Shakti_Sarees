@@ -16,6 +16,9 @@
         <!-- Form Card Container -->
         <div class="ss-cp-card">
 
+            <!-- Feedback / Error Message -->
+            <asp:Label ID="lblMsg" runat="server" CssClass="ss-val-text" Visible="false" style="display:block; margin-bottom:15px; font-weight:600;"></asp:Label>
+
             <!-- Current Password -->
             <div class="ss-cp-field">
                 <label class="ss-cp-label">Current Password</label>

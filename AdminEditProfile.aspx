@@ -8,6 +8,9 @@
     <div class="ss-ep-viewport">
         <div class="ss-ep-card">
 
+            <!-- Feedback / Error Message -->
+            <asp:Label ID="lblMsg" runat="server" CssClass="ss-val-text" Visible="false" style="display:block; margin-bottom:15px; font-weight:600;"></asp:Label>
+
             <!-- Section 1: Details -->
             <div class="ss-ep-section">
                 <h2 class="ss-ep-section-title">Details</h2>
@@ -16,7 +19,7 @@
                 <!-- Full Name -->
                 <div class="ss-ep-field ss-field-narrow">
                     <label class="ss-ep-label">Full Name</label>
-                    <asp:TextBox ID="txtFullName" runat="server" CssClass="ss-ep-input" Text="Ishit Vadhavana"></asp:TextBox>
+                    <asp:TextBox ID="txtFullName" runat="server" CssClass="ss-ep-input"></asp:TextBox>
                     
                     <asp:RequiredFieldValidator ID="rfvFullName" runat="server"
                         ControlToValidate="txtFullName"
@@ -37,7 +40,7 @@
                 <div class="ss-ep-row">
                     <div class="ss-ep-col ss-col-compact">
                         <label class="ss-ep-label">Email Address</label>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-ep-input" Text="ishit@gmail.com"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-ep-input"></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvEmail" runat="server"
                             ControlToValidate="txtEmail"
@@ -56,7 +59,7 @@
 
                    <div class="ss-ep-col ss-col-wide">
                         <label class="ss-ep-label">Mobile Number</label>
-                        <asp:TextBox ID="txtMobile" runat="server" CssClass="ss-ep-input" Text="8460065647" MaxLength="10"></asp:TextBox>
+                        <asp:TextBox ID="txtMobile" runat="server" CssClass="ss-ep-input" MaxLength="10"></asp:TextBox>
     
                         <asp:RequiredFieldValidator ID="rfvMobile" runat="server"
                             ControlToValidate="txtMobile"
@@ -84,7 +87,7 @@
                 <div class="ss-ep-row">
                     <div class="ss-ep-col">
                         <label class="ss-ep-label">Local Address</label>
-                        <asp:TextBox ID="txtLocalAddress" runat="server" CssClass="ss-ep-input" Text="Samras Boys Hostel"></asp:TextBox>
+                        <asp:TextBox ID="txtLocalAddress" runat="server" CssClass="ss-ep-input"></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvLocalAddress" runat="server"
                             ControlToValidate="txtLocalAddress"
@@ -96,7 +99,7 @@
 
                     <div class="ss-ep-col">
                         <label class="ss-ep-label">City</label>
-                        <asp:TextBox ID="txtCity" runat="server" CssClass="ss-ep-input" Text="Rajkot"></asp:TextBox>
+                        <asp:TextBox ID="txtCity" runat="server" CssClass="ss-ep-input"></asp:TextBox>
                         
                         <asp:RequiredFieldValidator ID="rfvCity" runat="server"
                             ControlToValidate="txtCity"
@@ -110,7 +113,7 @@
                 <!-- PIN Code -->
                 <div class="ss-ep-field ss-field-narrow">
                     <label class="ss-ep-label">PIN Code</label>
-                    <asp:TextBox ID="txtPinCode" runat="server" CssClass="ss-ep-input" Text="360005" MaxLength="6"></asp:TextBox>
+                    <asp:TextBox ID="txtPinCode" runat="server" CssClass="ss-ep-input" MaxLength="6"></asp:TextBox>
                     
                     <asp:RequiredFieldValidator ID="rfvPinCode" runat="server"
                         ControlToValidate="txtPinCode"

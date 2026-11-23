@@ -10,47 +10,42 @@
         <!-- ================= TOP: PRODUCT SHOWCASE ================= -->
         <div class="ss-product-showcase">
             
-            <!-- Left: Gallery Media -->
+            <!-- Left: Gallery Media (100% Dynamic) -->
             <div class="ss-gallery-col">
                 <div class="ss-main-media">
-                    <img id="imgMainPreview" src="/images/single_product_main.png" alt="Midnight Orchid Heritage Saree" />
+                    <asp:Image ID="imgMainPreview" runat="server" AlternateText="Product Preview" />
                 </div>
                 
-                <!-- Thumbnails -->
+                <!-- Dynamic Thumbnails from ExtraImage1..ExtraImage4 -->
                 <div class="ss-thumbnail-strip">
-                    <div class="ss-thumb ss-thumb-active">
-                        <img src="/images/single_product_1.png" alt="Detail 1" />
-                    </div>
-                    <div class="ss-thumb">
-                        <img src="/images/single_product_2.png" alt="Detail 2" />
-                    </div>
-                    <div class="ss-thumb">
-                        <img src="/images/single_product_3.png" alt="Detail 3" />
-                    </div>
-                    <div class="ss-thumb">
-                        <img src="/images/single_product_2.png" alt="Detail 4" />
-                    </div>
+                    <asp:Repeater ID="rptThumbnails" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="btnThumb" runat="server" CssClass="ss-thumb" OnClick="btnThumb_Click" CommandArgument='<%# Container.DataItem %>'>
+                                <img src='<%# Container.DataItem %>' alt="Thumbnail" />
+                            </asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
             </div>
 
             <!-- Right: Product Information & Purchase Box -->
             <div class="ss-info-col">
                 <h1 class="ss-detail-title">
-                    <asp:Literal ID="litTitle" runat="server" Text="Midnight Orchid Heritage Saree"></asp:Literal>
+                    <asp:Literal ID="litTitle" runat="server"></asp:Literal>
                 </h1>
                 
                 <div class="ss-detail-price">
-                    <asp:Literal ID="litPrice" runat="server" Text="&#8377;14,500"></asp:Literal>
+                    <asp:Literal ID="litPrice" runat="server"></asp:Literal>
                 </div>
 
                 <div class="ss-detail-paragraphs">
                     <p>
-                        Woven in the spiritual heart of Varanasi, this Midnight Orchid Banarasi silk saree is a masterpiece of textile art. The rich, royal purple base is meticulously adorned with pure golden zari work, featuring classic 'jangla' floral vines spanning the entire body.
-                    </p>
-                    <p>
-                        Perfect for weddings and grand evening affairs, it drapes with a weighty elegance that only genuine heritage silk can provide. Comes with a matching unstitched blouse piece.
+                        <asp:Literal ID="litDescription" runat="server"></asp:Literal>
                     </p>
                 </div>
+
+                <!-- Feedback / Stock Message -->
+                <asp:Label ID="lblStockMsg" runat="server" CssClass="ss-val-text" Visible="false" style="display:block; margin-bottom:10px; color:#8C0D1B; font-weight:600;"></asp:Label>
 
                 <!-- Purchase Card Box -->
                 <div class="ss-buy-box">
@@ -75,64 +70,26 @@
             </div>
         </div>
 
-        <!-- ================= BOTTOM: NEW ARRIVALS RECOMMENDATIONS ================= -->
+        <!-- ================= BOTTOM: NEW ARRIVALS RECOMMENDATIONS (100% DYNAMIC) ================= -->
         <section class="ss-recommendations">
             <h2 class="ss-rec-heading">New Arrivals</h2>
 
             <div class="ss-rec-grid">
-                
-                <!-- Rec 1 -->
-                <div class="ss-rec-card">
-                    <div class="ss-rec-media">
-                        <span class="ss-rec-badge">SILK</span>
-                        <img src="/images/single_product_new_1.png" alt="Royal Purple" />
-                    </div>
-                    <div class="ss-rec-body">
-                        <h4 class="ss-rec-title">Royal Purple...</h4>
-                        <p class="ss-rec-desc">Authentic handloom with gold zari.</p>
-                        <span class="ss-rec-price">&#8377;14,500</span>
-                    </div>
-                </div>
-
-                <!-- Rec 2 -->
-                <div class="ss-rec-card">
-                    <div class="ss-rec-media">
-                        <span class="ss-rec-badge">CHIFFON</span>
-                        <img src="/images/single_product_new_2.png" alt="Cream Floral" />
-                    </div>
-                    <div class="ss-rec-body">
-                        <h4 class="ss-rec-title">Cream Floral...</h4>
-                        <p class="ss-rec-desc">Lightweight elegance for evenings.</p>
-                        <span class="ss-rec-price">&#8377;4,200</span>
-                    </div>
-                </div>
-
-                <!-- Rec 3 -->
-                <div class="ss-rec-card">
-                    <div class="ss-rec-media">
-                        <span class="ss-rec-badge">COTTON</span>
-                        <img src="/images/single_product_new_3.png" alt="Sunshine Block" />
-                    </div>
-                    <div class="ss-rec-body">
-                        <h4 class="ss-rec-title">Sunshine Block</h4>
-                        <p class="ss-rec-desc">Breathable everyday wear.</p>
-                        <span class="ss-rec-price">&#8377;1,850</span>
-                    </div>
-                </div>
-
-                <!-- Rec 4 -->
-                <div class="ss-rec-card">
-                    <div class="ss-rec-media">
-                        <span class="ss-rec-badge">GEORGETTE</span>
-                        <img src="/images/single_product_new_4.png" alt="Midnight Maroon" />
-                    </div>
-                    <div class="ss-rec-body">
-                        <h4 class="ss-rec-title">Midnight Maroon...</h4>
-                        <p class="ss-rec-desc">Fluid drape for party wear.</p>
-                        <span class="ss-rec-price">&#8377;6,500</span>
-                    </div>
-                </div>
-
+                <asp:Repeater ID="rptRecommendations" runat="server">
+                    <ItemTemplate>
+                        <a href='ProductDetail.aspx?id=<%# Eval("ProductID") %>' class="ss-rec-card" style="text-decoration:none; color:inherit;">
+                            <div class="ss-rec-media">
+                                <span class="ss-rec-badge"><%# Eval("CategoryName").ToString().ToUpper() %></span>
+                                <img src='<%# Eval("MainImage") %>' alt='<%# Eval("ProductName") %>' />
+                            </div>
+                            <div class="ss-rec-body">
+                                <h4 class="ss-rec-title"><%# Eval("ProductName") %></h4>
+                                <p class="ss-rec-desc"><%# Eval("ProductDescription") %></p>
+                                <span class="ss-rec-price">&#8377;<%# Eval("Price") %></span>
+                            </div>
+                        </a>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </section>
 

@@ -13,6 +13,9 @@
         <!-- Form Card Container -->
         <div class="ss-auf-card">
 
+            <!-- Feedback / Error Message -->
+            <asp:Label ID="lblMsg" runat="server" CssClass="ss-val-text" Visible="false" style="display:block; margin-bottom:15px; font-weight:600;"></asp:Label>
+
             <!-- Full Name -->
             <div class="ss-auf-field">
                 <label class="ss-auf-label">Full Name</label>
@@ -155,11 +158,11 @@
                 <label class="ss-auf-label">Status</label>
                 <div class="ss-auf-radio-row">
                     <label class="ss-auf-radio-opt">
-                        <input type="radio" id="rbActive" name="userStatus" value="Active" checked="checked" />
+                        <input type="radio" id="rbActive" runat="server" name="userStatus" value="Active" checked="true" />
                         <span>Active</span>
                     </label>
                     <label class="ss-auf-radio-opt">
-                        <input type="radio" id="rbInactive" name="userStatus" value="Inactive" />
+                        <input type="radio" id="rbInactive" runat="server" name="userStatus" value="Inactive" />
                         <span>Inactive</span>
                     </label>
                 </div>

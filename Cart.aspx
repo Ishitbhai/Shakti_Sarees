@@ -16,7 +16,7 @@
         <!-- Main Content Layout -->
         <div class="ss-cart-layout">
             
-            <!-- Left Column: Items List -->
+            <!-- Left Column: Items List (100% Dynamic from Cart Table) -->
             <div class="ss-cart-items-col">
                 
                 <!-- Table Header Labels -->
@@ -27,55 +27,33 @@
                     <span class="ss-th-total">TOTAL</span>
                 </div>
 
-                <!-- Cart Item Card 1 -->
-                <div class="ss-cart-item-card">
-                    <div class="ss-item-prod-cell">
-                        <div class="ss-item-thumb">
-                            <img src="/images/cart_1.png" alt="Royal Maroon" />
+                <asp:Repeater ID="rptCartItems" runat="server">
+                    <ItemTemplate>
+                        <div class="ss-cart-item-card">
+                            <div class="ss-item-prod-cell">
+                                <div class="ss-item-thumb">
+                                    <img src='<%# Eval("MainImage") %>' alt='<%# Eval("ProductName") %>' />
+                                </div>
+                                <div class="ss-item-meta">
+                                    <span class="ss-badge-silk"><%# Eval("CategoryName").ToString().ToUpper() %></span>
+                                    <h3 class="ss-cart-item-title"><%# Eval("ProductName") %></h3>
+                                    <asp:LinkButton ID="btnRemove" runat="server" CssClass="ss-remove-btn" OnClick="btnRemoveItem_Click" CommandArgument='<%# Eval("CartID") %>'>
+                                        <i class="fa-regular fa-trash-can"></i> REMOVE
+                                    </asp:LinkButton>
+                                </div>
+                            </div>
+                            <div class="ss-item-price-cell">&#8377;<%# Eval("Price") %></div>
+                            <div class="ss-item-qty-cell">
+                                <div class="ss-qty-stepper">
+                                    <asp:Button ID="btnMinus" runat="server" Text="&minus;" CssClass="ss-step-btn" OnClick="btnMinus_Click" CommandArgument='<%# Eval("CartID") %>' />
+                                    <asp:Label ID="lblQty" runat="server" Text='<%# Eval("Quantity") %>' CssClass="ss-step-val"></asp:Label>
+                                    <asp:Button ID="btnPlus" runat="server" Text="+" CssClass="ss-step-btn" OnClick="btnPlus_Click" CommandArgument='<%# Eval("CartID") %>' />
+                                </div>
+                            </div>
+                            <div class="ss-item-total-cell">&#8377;<%# Eval("ItemTotal") %></div>
                         </div>
-                        <div class="ss-item-meta">
-                            <span class="ss-badge-silk">BANARASI SILK</span>
-                            <h3 class="ss-cart-item-title">Royal Maroon<br />Zari Woven Saree</h3>
-                            <asp:LinkButton ID="btnRemove1" runat="server" CssClass="ss-remove-btn" OnClick="btnRemoveItem_Click" CommandArgument="1">
-                                <i class="fa-regular fa-trash-can"></i> REMOVE
-                            </asp:LinkButton>
-                        </div>
-                    </div>
-                    <div class="ss-item-price-cell">&#8377;12,499</div>
-                    <div class="ss-item-qty-cell">
-                        <div class="ss-qty-stepper">
-                            <asp:Button ID="btnMinus1" runat="server" Text="&minus;" CssClass="ss-step-btn" OnClick="btnMinus_Click" CommandArgument="1" />
-                            <asp:Label ID="lblQty1" runat="server" Text="1" CssClass="ss-step-val"></asp:Label>
-                            <asp:Button ID="btnPlus1" runat="server" Text="+" CssClass="ss-step-btn" OnClick="btnPlus_Click" CommandArgument="1" />
-                        </div>
-                    </div>
-                    <div class="ss-item-total-cell">&#8377;12,499</div>
-                </div>
-
-                <!-- Cart Item Card 2 -->
-                <div class="ss-cart-item-card">
-                    <div class="ss-item-prod-cell">
-                        <div class="ss-item-thumb">
-                            <img src="/images/cart_2.png" alt="Emerald Green" />
-                        </div>
-                        <div class="ss-item-meta">
-                            <span class="ss-badge-kanchi">KANCHIPURAM</span>
-                            <h3 class="ss-cart-item-title">Emerald Green<br />Peacock Border</h3>
-                            <asp:LinkButton ID="btnRemove2" runat="server" CssClass="ss-remove-btn" OnClick="btnRemoveItem_Click" CommandArgument="2">
-                                <i class="fa-regular fa-trash-can"></i> REMOVE
-                            </asp:LinkButton>
-                        </div>
-                    </div>
-                    <div class="ss-item-price-cell">&#8377;18,950</div>
-                    <div class="ss-item-qty-cell">
-                        <div class="ss-qty-stepper">
-                            <asp:Button ID="btnMinus2" runat="server" Text="&minus;" CssClass="ss-step-btn" OnClick="btnMinus_Click" CommandArgument="2" />
-                            <asp:Label ID="lblQty2" runat="server" Text="2" CssClass="ss-step-val"></asp:Label>
-                            <asp:Button ID="btnPlus2" runat="server" Text="+" CssClass="ss-step-btn" OnClick="btnPlus_Click" CommandArgument="2" />
-                        </div>
-                    </div>
-                    <div class="ss-item-total-cell">&#8377;37,900</div>
-                </div>
+                    </ItemTemplate>
+                </asp:Repeater>
 
                 <!-- Return Link -->
                 <div class="ss-continue-wrap">
@@ -84,26 +62,28 @@
 
             </div>
 
-            <!-- Right Column: Order Summary Card -->
+            <!-- Right Column: Order Summary Card (100% Dynamic) -->
             <aside class="ss-cart-summary-col">
                 <div class="ss-summary-card">
                     <h2 class="ss-summary-title">Order Summary</h2>
 
                     <div class="ss-summary-row">
-                        <span class="ss-sum-label">Subtotal (3 items)</span>
-                        <span class="ss-sum-val">&#8377;50,399</span>
+                        <span class="ss-sum-label">
+                            Subtotal (<asp:Literal ID="litItemCount" runat="server" Text="0"></asp:Literal> items)
+                        </span>
+                        <span class="ss-sum-val">&#8377;<asp:Literal ID="litSubtotal" runat="server" Text="0.00"></asp:Literal></span>
                     </div>
 
                     <div class="ss-summary-row">
                         <span class="ss-sum-label">Taxes</span>
-                        <span class="ss-sum-val">&#8377;1,035</span>
+                        <span class="ss-sum-val">&#8377;<asp:Literal ID="litTaxes" runat="server" Text="0.00"></asp:Literal></span>
                     </div>
 
                     <hr class="ss-sum-divider" />
 
                     <div class="ss-total-row">
                         <span class="ss-total-label">Total</span>
-                        <span class="ss-total-val">&#8377;51,434</span>
+                        <span class="ss-total-val">&#8377;<asp:Literal ID="litFinalTotal" runat="server" Text="0.00"></asp:Literal></span>
                     </div>
 
                     <asp:Button ID="btnCheckout" runat="server" Text="Proceed to Checkout &rarr;" CssClass="ss-checkout-btn" OnClick="btnCheckout_Click" />

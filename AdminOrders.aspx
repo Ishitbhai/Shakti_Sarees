@@ -18,7 +18,7 @@
             </a>
         </div>
 
-        <!-- Orders Table Card -->
+        <!-- Orders Table Card (100% Dynamic from Orders, Users, OrderItems & Products Tables) -->
         <div class="ss-ord-card">
             
             <!-- Table Header -->
@@ -32,145 +32,39 @@
                 <span class="ss-col-actions">ACTIONS</span>
             </div>
 
-            <!-- Row 1: Processing (Yellow) -->
-            <div class="ss-ord-row">
-                <span class="ss-col-oid ss-oid-text">#89</span>
-                <div class="ss-col-cust">
-                    <span class="ss-cust-name">Vadhavana Ishit</span>
-                    <span class="ss-cust-email">ishit@gmail.com</span>
-                </div>
-                <div class="ss-col-prod">
-                    <span class="ss-prod-cat">Cotton</span>
-                    <span class="ss-prod-title">Royal Maroon Zari Woven Saree</span>
-                </div>
-                <span class="ss-col-date">Aug 15, 2026</span>
-                <span class="ss-col-total ss-total-amt">&#8377;14,500</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-yellow">PROCESSING</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditOrder.aspx?id=0891" class="ss-ord-action-btn ss-ord-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-ord-action-btn ss-ord-delete"
-                       onclick="confirm('Are you sure you want to delete this order?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 2: Pending (Grey) -->
-            <div class="ss-ord-row">
-                <span class="ss-col-oid ss-oid-text">#88</span>
-                <div class="ss-col-cust">
-                    <span class="ss-cust-name">Vadhavana Ishit</span>
-                    <span class="ss-cust-email">ishit@gmail.com</span>
-                </div>
-                <div class="ss-col-prod">
-                    <span class="ss-prod-cat">Banarasi</span>
-                    <span class="ss-prod-title">Weddings, bridal wear</span>
-                </div>
-                <span class="ss-col-date">Aug 08, 2025</span>
-                <span class="ss-col-total ss-total-amt">&#8377;32,800</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-grey">PENDING</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditOrder.aspx?id=0891" class="ss-ord-action-btn ss-ord-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-ord-action-btn ss-ord-delete"
-                       onclick="confirm('Are you sure you want to delete this order?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 3: Shipped (Blue) -->
-            <div class="ss-ord-row">
-                <span class="ss-col-oid ss-oid-text">#87</span>
-                <div class="ss-col-cust">
-                    <span class="ss-cust-name">Vadhavana Ishit</span>
-                    <span class="ss-cust-email">ishit@gmail.com</span>
-                </div>
-                <div class="ss-col-prod">
-                    <span class="ss-prod-cat">Bandhni</span>
-                    <span class="ss-prod-title">Festivals, Navratri</span>
-                </div>
-                <span class="ss-col-date">Jan 30, 2026</span>
-                <span class="ss-col-total ss-total-amt">&#8377;21,965</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-blue">SHIPPED</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditOrder.aspx?id=0891" class="ss-ord-action-btn ss-ord-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-ord-action-btn ss-ord-delete"
-                       onclick="confirm('Are you sure you want to delete this order?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 4: Processing (Light Green) -->
-            <div class="ss-ord-row">
-                <span class="ss-col-oid ss-oid-text">#86</span>
-                <div class="ss-col-cust">
-                    <span class="ss-cust-name">Vadhavana Ishit</span>
-                    <span class="ss-cust-email">ishit@gmail.com</span>
-                </div>
-                <div class="ss-col-prod">
-                    <span class="ss-prod-cat">Cotton</span>
-                    <span class="ss-prod-title">Royal Maroon Zari Woven Saree</span>
-                </div>
-                <span class="ss-col-date">Jun 15, 2026</span>
-                <span class="ss-col-total ss-total-amt">&#8377;56,206</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-green">PROCESSING</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditOrder.aspx?id=0891" class="ss-ord-action-btn ss-ord-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-ord-action-btn ss-ord-delete"
-                       onclick="confirm('Are you sure you want to delete this order?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 5: Pending (Grey) -->
-            <div class="ss-ord-row">
-                <span class="ss-col-oid ss-oid-text">#85</span>
-                <div class="ss-col-cust">
-                    <span class="ss-cust-name">Vadhavana Ishit</span>
-                    <span class="ss-cust-email">ishit@gmail.com</span>
-                </div>
-                <div class="ss-col-prod">
-                    <span class="ss-prod-cat">Banarasi</span>
-                    <span class="ss-prod-title">Weddings, bridal wear</span>
-                </div>
-                <span class="ss-col-date">Dec 28, 2025</span>
-                <span class="ss-col-total ss-total-amt">&#8377;32,800</span>
-                <div class="ss-col-status">
-                    <span class="ss-badge-grey">PENDING</span>
-                </div>
-                <div class="ss-col-actions">
-                    <a href="AdminEditOrder.aspx?id=0891" class="ss-ord-action-btn ss-ord-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-ord-action-btn ss-ord-delete"
-                       onclick="confirm('Are you sure you want to delete this order?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
+            <asp:Repeater ID="rptOrders" runat="server">
+                <ItemTemplate>
+                    <div class="ss-ord-row">
+                        <span class="ss-col-oid ss-oid-text">#<%# Eval("OrderID") %></span>
+                        <div class="ss-col-cust">
+                            <span class="ss-cust-name"><%# Eval("FullName") %></span>
+                            <span class="ss-cust-email"><%# Eval("CustomerEmail") %></span>
+                        </div>
+                        <div class="ss-col-prod">
+                            <span class="ss-prod-cat"><%# Eval("CategoryName") %></span>
+                            <span class="ss-prod-title"><%# Eval("ProductSummary") %></span>
+                        </div>
+                        <span class="ss-col-date"><%# Convert.ToDateTime(Eval("OrderDate")).ToString("MMM dd, yyyy") %></span>
+                        <span class="ss-col-total ss-total-amt">&#8377;<%# Eval("TotalAmount") %></span>
+                        <div class="ss-col-status">
+                            <span class='<%# GetStatusBadgeClass(Eval("OrderStatus").ToString()) %>'>
+                                <%# Eval("OrderStatus").ToString().ToUpper() %>
+                            </span>
+                        </div>
+                        <div class="ss-col-actions">
+                            <a href='AdminEditOrder.aspx?id=<%# Eval("OrderID") %>' class="ss-ord-action-btn ss-ord-edit" title="Edit">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
+                            <asp:LinkButton ID="btnDeleteOrder" runat="server" CssClass="ss-ord-action-btn ss-ord-delete"
+                                OnClick="btnDeleteOrder_Click" CommandArgument='<%# Eval("OrderID") %>'
+                                OnClientClick="return confirm('Are you sure you want to delete this order?');"
+                                ToolTip="Delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </asp:LinkButton>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
 
         </div>
 

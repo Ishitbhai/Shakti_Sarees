@@ -13,10 +13,13 @@
         <!-- Form Card Container -->
         <div class="ss-auf-card">
 
+            <!-- Feedback / Error Message -->
+            <asp:Label ID="lblMsg" runat="server" CssClass="ss-val-text" Visible="false" style="display:block; margin-bottom:15px; font-weight:600;"></asp:Label>
+
             <!-- Full Name -->
             <div class="ss-auf-field">
                 <label class="ss-auf-label">Full Name</label>
-                <asp:TextBox ID="txtFullName" runat="server" CssClass="ss-auf-input" Text="Vadhavana Ishit"></asp:TextBox>
+                <asp:TextBox ID="txtFullName" runat="server" CssClass="ss-auf-input"></asp:TextBox>
                 
                 <asp:RequiredFieldValidator ID="rfvFullName" runat="server"
                     ControlToValidate="txtFullName"
@@ -36,7 +39,7 @@
             <!-- Email -->
             <div class="ss-auf-field">
                 <label class="ss-auf-label">Email</label>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-auf-input" Text="ishit@gmail.com"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="ss-auf-input"></asp:TextBox>
                 
                 <asp:RequiredFieldValidator ID="rfvEmail" runat="server"
                     ControlToValidate="txtEmail"
@@ -56,7 +59,7 @@
             <!-- Contact Number -->
             <div class="ss-auf-field">
                 <label class="ss-auf-label">Contact Number</label>
-                <asp:TextBox ID="txtContactNumber" runat="server" CssClass="ss-auf-input" Text="84600 65647"></asp:TextBox>
+                <asp:TextBox ID="txtContactNumber" runat="server" CssClass="ss-auf-input"></asp:TextBox>
                 
                 <asp:RequiredFieldValidator ID="rfvContactNumber" runat="server"
                     ControlToValidate="txtContactNumber"
@@ -76,7 +79,7 @@
             <!-- Local Address -->
             <div class="ss-auf-field">
                 <label class="ss-auf-label">Local Address</label>
-                <asp:TextBox ID="txtLocalAddress" runat="server" CssClass="ss-auf-input" Text="Samras Boys hostel"></asp:TextBox>
+                <asp:TextBox ID="txtLocalAddress" runat="server" CssClass="ss-auf-input"></asp:TextBox>
                 
                 <asp:RequiredFieldValidator ID="rfvLocalAddress" runat="server"
                     ControlToValidate="txtLocalAddress"
@@ -90,7 +93,7 @@
             <div class="ss-auf-row">
                 <div class="ss-auf-col">
                     <label class="ss-auf-label">City</label>
-                    <asp:TextBox ID="txtCity" runat="server" CssClass="ss-auf-input" Text="rajkot"></asp:TextBox>
+                    <asp:TextBox ID="txtCity" runat="server" CssClass="ss-auf-input"></asp:TextBox>
                     
                     <asp:RequiredFieldValidator ID="rfvCity" runat="server"
                         ControlToValidate="txtCity"
@@ -102,7 +105,7 @@
 
                 <div class="ss-auf-col">
                     <label class="ss-auf-label">Pin code</label>
-                    <asp:TextBox ID="txtPinCode" runat="server" CssClass="ss-auf-input" Text="360005"></asp:TextBox>
+                    <asp:TextBox ID="txtPinCode" runat="server" CssClass="ss-auf-input"></asp:TextBox>
                     
                     <asp:RequiredFieldValidator ID="rfvPinCode" runat="server"
                         ControlToValidate="txtPinCode"
@@ -124,7 +127,7 @@
             <div class="ss-auf-row">
                 <div class="ss-auf-col">
                     <label class="ss-auf-label">Password</label>
-                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="ss-auf-input" Placeholder="Enter Password"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="ss-auf-input" Placeholder="Leave blank to keep existing password"></asp:TextBox>
                     
                     <!-- In edit mode, password is optional unless changing -->
                     <asp:RegularExpressionValidator ID="revPassword" runat="server"
@@ -139,7 +142,7 @@
                 <div class="ss-auf-col">
                     <label class="ss-auf-label">Role</label>
                     <asp:DropDownList ID="ddlRole" runat="server" CssClass="ss-auf-select">
-                        <asp:ListItem Text="Admin" Value="Admin" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="Admin" Value="Admin"></asp:ListItem>
                         <asp:ListItem Text="Customer" Value="Customer"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
@@ -150,11 +153,11 @@
                 <label class="ss-auf-label">Status</label>
                 <div class="ss-auf-radio-row">
                     <label class="ss-auf-radio-opt">
-                        <input type="radio" id="rbActive" name="userStatus" value="Active" checked="checked" />
+                        <input type="radio" id="rbActive" runat="server" name="userStatus" value="Active" checked="true" />
                         <span>Active</span>
                     </label>
                     <label class="ss-auf-radio-opt">
-                        <input type="radio" id="rbInactive" name="userStatus" value="Inactive" />
+                        <input type="radio" id="rbInactive" runat="server" name="userStatus" value="Inactive" />
                         <span>Inactive</span>
                     </label>
                 </div>

@@ -18,7 +18,7 @@
             </a>
         </div>
 
-        <!-- Users Table Card -->
+        <!-- Users Table Card (100% Dynamic from Users Table) -->
         <div class="ss-usr-card">
 
             <!-- Table Header Row -->
@@ -31,89 +31,32 @@
                 <span class="ss-col-uactions">ACTIONS</span>
             </div>
 
-            <!-- Row 1: Vadhavana Ishit -->
-            <div class="ss-usr-row">
-                <span class="ss-col-uid ss-txt-uid">USR-<br />#43</span>
-                <span class="ss-col-uname ss-txt-name">Vadhavana Ishit</span>
-                <span class="ss-col-uemail ss-txt-email">ishit@gmail.com</span>
-                <span class="ss-col-umobile ss-txt-mobile">+91 8460065647</span>
-                <div class="ss-col-ustatus">
-                    <span class="ss-badge-active-grey">ACTIVE</span>
-                </div>
-                <div class="ss-col-uactions">
-                    <a href="AdminEditUser.aspx?id=8892" class="ss-usr-action-btn ss-usr-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-usr-action-btn ss-usr-delete"
-                       onclick="confirm('Are you sure you want to delete this user?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 2: Vadhavana Smit -->
-            <div class="ss-usr-row">
-                <span class="ss-col-uid ss-txt-uid">USR-<br />#42</span>
-                <span class="ss-col-uname ss-txt-name">Vadhavana Smit</span>
-                <span class="ss-col-uemail ss-txt-email">smit@gmail.com</span>
-                <span class="ss-col-umobile ss-txt-mobile">+91 94097 56523</span>
-                <div class="ss-col-ustatus">
-                    <span class="ss-badge-active-grey">ACTIVE</span>
-                </div>
-                <div class="ss-col-uactions">
-                    <a href="AdminEditUser.aspx?id=8892" class="ss-usr-action-btn ss-usr-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-usr-action-btn ss-usr-delete"
-                       onclick="confirm('Are you sure you want to delete this user?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 3: Makvana Hiren -->
-            <div class="ss-usr-row">
-                <span class="ss-col-uid ss-txt-uid">USR-<br />#41</span>
-                <span class="ss-col-uname ss-txt-name">Makvana Hiren</span>
-                <span class="ss-col-uemail ss-txt-email">hiren@gmail.com</span>
-                <span class="ss-col-umobile ss-txt-mobile">+91 98756 26486</span>
-                <div class="ss-col-ustatus">
-                    <span class="ss-badge-inactive-pink">INACTIVE</span>
-                </div>
-                <div class="ss-col-uactions">
-                    <a href="AdminEditUser.aspx?id=8892" class="ss-usr-action-btn ss-usr-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-usr-action-btn ss-usr-delete"
-                       onclick="confirm('Are you sure you want to delete this user?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Row 4: Limbad Duval -->
-            <div class="ss-usr-row">
-                <span class="ss-col-uid ss-txt-uid">USR-<br />#40</span>
-                <span class="ss-col-uname ss-txt-name">Limbad Duval</span>
-                <span class="ss-col-uemail ss-txt-email">dhruval@gmail.com</span>
-                <span class="ss-col-umobile ss-txt-mobile">+91 97235 56457</span>
-                <div class="ss-col-ustatus">
-                    <span class="ss-badge-active-grey">ACTIVE</span>
-                </div>
-                <div class="ss-col-uactions">
-                    <a href="AdminEditUser.aspx?id=8892" class="ss-usr-action-btn ss-usr-edit" title="Edit">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="ss-usr-action-btn ss-usr-delete"
-                       onclick="confirm('Are you sure you want to delete this user?'); return false;"
-                       title="Delete">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                </div>
-            </div>
+            <asp:Repeater ID="rptUsers" runat="server">
+                <ItemTemplate>
+                    <div class="ss-usr-row">
+                        <span class="ss-col-uid ss-txt-uid">USR-<br />#<%# Eval("UserID") %></span>
+                        <span class="ss-col-uname ss-txt-name"><%# Eval("FullName") %></span>
+                        <span class="ss-col-uemail ss-txt-email"><%# Eval("Email") %></span>
+                        <span class="ss-col-umobile ss-txt-mobile">+91 <%# Eval("MobileNumber") %></span>
+                        <div class="ss-col-ustatus">
+                            <span class='<%# Eval("Status").ToString() == "Active" ? "ss-badge-active-grey" : "ss-badge-inactive-pink" %>'>
+                                <%# Eval("Status").ToString().ToUpper() %>
+                            </span>
+                        </div>
+                        <div class="ss-col-uactions">
+                            <a href='AdminEditUser.aspx?id=<%# Eval("UserID") %>' class="ss-usr-action-btn ss-usr-edit" title="Edit">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
+                            <asp:LinkButton ID="btnDeleteUser" runat="server" CssClass="ss-usr-action-btn ss-usr-delete"
+                                OnClick="btnDeleteUser_Click" CommandArgument='<%# Eval("UserID") %>'
+                                OnClientClick="return confirm('Are you sure you want to delete this user?');"
+                                ToolTip="Delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </asp:LinkButton>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
 
         </div>
 

@@ -15,76 +15,49 @@ namespace Shakti_Sarees
     {
 
         /// <summary>
-        /// btnRemove1 control.
+        /// rptCartItems control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnRemove1;
+        protected global::System.Web.UI.WebControls.Repeater rptCartItems;
 
         /// <summary>
-        /// btnMinus1 control.
+        /// litItemCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMinus1;
+        protected global::System.Web.UI.WebControls.Literal litItemCount;
 
         /// <summary>
-        /// lblQty1 control.
+        /// litSubtotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQty1;
+        protected global::System.Web.UI.WebControls.Literal litSubtotal;
 
         /// <summary>
-        /// btnPlus1 control.
+        /// litTaxes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPlus1;
+        protected global::System.Web.UI.WebControls.Literal litTaxes;
 
         /// <summary>
-        /// btnRemove2 control.
+        /// litFinalTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnRemove2;
-
-        /// <summary>
-        /// btnMinus2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMinus2;
-
-        /// <summary>
-        /// lblQty2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQty2;
-
-        /// <summary>
-        /// btnPlus2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPlus2;
+        protected global::System.Web.UI.WebControls.Literal litFinalTotal;
 
         /// <summary>
         /// btnCheckout control.
